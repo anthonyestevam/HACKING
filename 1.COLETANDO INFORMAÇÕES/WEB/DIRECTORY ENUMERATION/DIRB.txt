@@ -1,0 +1,12 @@
+É UMA FERRAMENTA QUE FAZ UM BRUTE FORCE PARA ENUMERAR OS DIRÉTORIOS DE UM SITE.
+
+	COMANDO:
+		dirb url_alvo
+		
+		EX: dirb https://seusite.com
+		
+		CASO QUEIRA USAR UMA WORDLIST DIFERENTE:
+			
+			dirb <url_alvo> <caminho_wordlist>
+			
+			EX: dirb https://seusite.com /home/thxny/Wordlists/wordlist.txt

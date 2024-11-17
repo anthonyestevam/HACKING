@@ -1,0 +1,15 @@
+O HASHCAT É UMA FERRAMENTA DE BRUTE FORCING EM HASHINGS, TRABALHANDO DE FORMA OFFLINE.
+	
+		1.CRIAR UM ARQUIVO TXT E COLOCAR A HASHING.
+		
+		2.FAZER O BRUTE FORCING.
+			
+			COMANDO: hashcat -m <numero_hashing> <hashing.txt> <wordlist.txt>
+			
+			EX: hashcat -m 200 hashing.txt /home/thxny/wordlist.txt
+			
+			PARA SABER O NUMERO DO TIPO DA HASHING DA SENHA, FAÇA O COMANDO: hashcat -h
+			NELE APARECERÁ O NUMERO PARA HASHINGS COMO SHA256, ETC...
+			
+			EXTRA: O PARÂMETRO DE WORDLIST É OPCIONAL.
+			

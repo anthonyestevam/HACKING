@@ -1,0 +1,3 @@
+FINDOMAIN É UM ENUMERADOR DE SUBDOMINIOS.
+	
+	COMANDOS: findomain -t <domain>

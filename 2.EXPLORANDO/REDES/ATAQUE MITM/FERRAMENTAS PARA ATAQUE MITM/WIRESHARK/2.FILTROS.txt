@@ -1,0 +1,16 @@
+OS FILTROS PODEM SER USADO PARA VOCÊ VER APENAS O QUE DESEJA.
+	
+	ip.src == ip_alvo: VAI FILTRAR APENAS OS PACOTES DO IP ALVO.
+		
+		EX: ip.src == 192.168.3.2
+		
+	&&: É USADO PARA CONCATENAR UM FILTRO COM OUTRO.
+	
+	http.method.request == "metodo_desejado": IRÁ FILTRAR OS PACOTES DE REQUISIÇÕES HTTP SENDO ELAS
+	POST OU GET.	
+			
+			EX: http.method.request == "GET" 
+			
+	tcp.port == <porta>: VAI FILTRAR APENAS OS PACOTES DA PORTA TCP DESEJADA.
+		
+		EX: tcp.port == 80

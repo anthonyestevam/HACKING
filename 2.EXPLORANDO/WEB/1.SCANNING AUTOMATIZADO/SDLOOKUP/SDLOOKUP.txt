@@ -1,0 +1,9 @@
+O SDLOOKUP É UMA FERRAMENTA QUE ESCANEIA PORTAS ABERTAS DE UM IP E MOSTRA POSSIVÉIS CVEs.
+	
+	COMANDO: xargs -a ips.txt -I@ sh -c 'echo @ | sdlookup -json' 
+	
+		PODE UTILIZAR A JUNÇÃO DE OUTRAS TOOLS PARA UMA ANÁLISE MAIS
+		ORGANIZADA E RÁPIDA.
+			
+		EX: echo site.com | subfinder -all -silent | httpx -silent -ip | awk '{print $2}' |
+		tr -d '[]' | xargs -I@ sh -c 'echo @ | sdlookup -json | python3 -m json.tool'

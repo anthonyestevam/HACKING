@@ -1,0 +1,31 @@
+O CRLF INJECTION(HTTP RESPONSE SPLITTING) É UMA VULNERABILIDADE, ONDE O ATACANTE CONSEGUE MANIPULAR O CABEÇALHO INJETANDO UMA NOVA LINHA(%0d%0a)NA REQUISIÇÃO.ASSIM PODENDO INCLUIR NOVOS CABEÇALHOS, COMO O 'Location',REDIRECIONANDO O USUÁRIO PARA UM SITE MALICIOSO OU ADICIONANDO UM CÓDIGO HTML OU ATAQUE XSS OU ATÉ MESMO ADICIONANDO NOVOS PARÂMETROS, ETC...
+	
+	 
+	%0D%0a: É A FORMA CODIFICADA POR URL DE CRLF.
+	
+	%20: É A FORMA CODIFICADA POR URL DE DAR ESPAÇO.
+	
+	EX:
+	 http://site.com/vulneravel.php?usuario.php=%0d%0aLocation:%20http://
+	 google.com
+	 
+	 OU
+	 
+	 http://site.com/index.html?user=%0d%0a<html>test</html>
+	 
+	 OU
+	 
+	 http://site.com/%0D%0Aset-cookie: something
+	 
+	 OUTRA FORMA DE USAR O CRLF INJECTION É PARA UM ATAQUE XSS, PARA ISSO
+	 DEVE SER USAR O CÓDIGO CRLF DUAS VEZES, INDICANDO PARA O NAVEGADOR
+	 QUE O CABEÇALHO TERMINA E O CORPO COMEÇA.
+	 
+	 EX:
+       	    https://seusite.com/php?name=Bob%0d%0a%0d%0a<script>alert('oi')
+       	    </script>
+       	    
+OBS: CRLF É A FORMA DE QUEBRAR LINHA QUE SERIA NO CASO '\r\n'.
+       	   
+	 
+

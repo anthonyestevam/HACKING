@@ -1,0 +1,53 @@
+nmap:
+	Mostra quais portas estão abertas no site.
+
+PARÂMETROS DO NMAP:
+	
+-iL:
+	Lê um arquivo txt com quais portas serão escaneadas.
+	EX: nmap -iL arquivo.txt
+
+-iR:
+	Você escolhe quantas portas serão escaneadas aleatoriamente.
+	EX: nmap http://site.com -iR 10
+	
+-sL:
+	Traz uma lista simples para saber quais hosts tem e quais estão ativos ou não.
+
+-p:
+	Ele escaneia apenas um porta.
+	EX: nmap http://site.com -p 80
+
+--top-ports :
+	FAZ UM SCAN NAS PRINCIPAIS PORTAS, PODENDO FAZER TAMBÉM UM ESCANEAMENTO NAS 10 PRINCIPAIS PORTAS, EX: --			
+	top-ports 10 IRÁ ESCANEAR AS 10 PRINCIPAIS PORTAS E PODE SER USADA TAMBÉM PARA FAZER UM BYPASS EM UM
+	FIREWALL TAMBÉM.
+	
+-A:
+	Escaneia SO, versão, roda um script e um traceroute.
+	EX: nmap http://site.com -A
+	
+-sS:
+	VERIFICA AS PORTAS TCP ABERTAS FAZENDO UM SYN SCAN.
+	
+	EX: nmap -v -sS 155.678.99.87
+	
+ -oA nome_para_arquivo:
+ 
+	 SALVA O OUTPUT DO SCAN EM UM ARQUIVO.
+
+-sU:
+	
+	FAZ O ESCANEAMENTO EM PORTAS UDP.
+
+-sV:
+	FAZ O NMAP ESCANEAR AS PORTAS, MOSTRA QUAIS VERSÕES RODAM EM CADA UMA.
+	
+-p -: É UM PARÂMETRO QUE PODE SER USADO PARA FAZER UM SCANNER DE TODAS AS PORTAS.
+
+-Pn: É USADO PARA O NMAP NÃO MANDAR PACOTES PARA O ICMP.
+
+-T: É A VELOCIDADE PARA FAZER UM SCAN, INDO DE 0 A 5, PODENDO USAR AS VEZES UM -T1 OU -T2 PARA 
+ESCANEAR MAIS DEVAGAR E AS VEZES PODENDO FAZER UM BYPASS EM UM FIREWALL OU USANDO UM -T5 PARA FAZER UM SCAN
+MAIS AGRESSIVO E RÁPIDO.
+

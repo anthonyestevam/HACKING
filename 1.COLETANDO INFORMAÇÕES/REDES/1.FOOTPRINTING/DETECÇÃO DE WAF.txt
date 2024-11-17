@@ -1,0 +1,15 @@
+O WAF É UM FIREWALL DE APLICAÇÃO WEB, QUE É USADO PARA FILTRAR PESQUISAS, IPS, ETC...
+	
+	FERRAMENTA PARA DETECÇÃO DO WAF: wafw00f
+	
+		COMANDO:
+			
+			wafw00f url_alvo
+				
+			EX: wafw00f https://seusite.com
+			
+			
+	FERRAMENTA NMAP:
+		
+		nmap seusite.com --script=http-waf-detect: ELE DETECTA APENAS WAF QUE BLOQUEIAM E FILTRAM
+		COMANDOS, PESQUISAS E PAYLOADS MALICIOSOS.

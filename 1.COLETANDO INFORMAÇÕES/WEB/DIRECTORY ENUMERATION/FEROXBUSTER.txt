@@ -1,0 +1,5 @@
+O FEROXBUSTER É UM FUZZER QUE PODE SER UTILIZADO PARA FAZER ANUMERAÇÃO DE DIRETÓRIOS.
+	
+	COMANDO: feroxbuster -u <url> -w <wordlist> --silent | grep 200 | grep 302 | awk '{print $6}'
+	
+	PODE SE UTILZIAR WORDLISTS DO DIRB, DIRBUSTER, ETC...

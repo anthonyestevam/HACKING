@@ -1,0 +1,39 @@
+CLIENT SIDE DESYNC
+
+Client Side Desync é uma técnica de exploração. A vulnerabilidade ocorre quando é enviado um POST para um servidor e ele simplesmente
+ignora os pacotes do corpo e já simplesmente responde sua requisição.
+
+Como explorar:
+
+1.Envie a requisição para o Repeater.
+
+2.Veja se o HTTP é 1.1 caso não seja tente fazer o downgrade alterando de HTTP/2 para HTTP/1.1.
+
+3.Altere a requisição de Get pra Post, clicando com o botão direito e clique em change request method.
+
+4.Desative o Content Length clicando na engrenagem ao lado do send e desativando o Update Content Length.
+
+5.Altere o Content Length para algum número que seja maior que o corpo da requisição que no caso seria qualquer número maior que 0 já que provavelmente seu post não terá body, como por exemplo 30 e veja se a connection esta em keep-alive, caso esteja em close, tente mudar para keep-alive e veja se o servidor aceita.
+
+6.Envie a requisição, caso o servidor esteja ignorando pacotes, ele irá manter a resposta que estava tendo antes, que seria por exemplo um código 302, 301 ou 200.
+
+7.Agora adicione na requisição como Body dela, outra requisição em um endpoint inexistente e ative novamente o Update Content Length.
+
+Ex: 
+POST / HTTP/1.1
+Host: example.com
+Content-Length: 20
+Connection:keep-alive
+
+GET /404 HTTP/1.1
+Foo: X
+
+8.Mande para o repeater novamente a mesma requisição que enviou anteriormente.
+
+9.Crie um Group Tab com as duas requisições, sendo a primeira a que foi modificada e a segunda a normal.
+
+10.Clique na seta ao lado de send e clique em single connection
+
+11.Clique em Send Group.
+
+12.Caso a a primeira requisição tenha ido normalmente e na segunda tenha dado um erro 404. Significa que foi explorado o ataque de Client Side Desync

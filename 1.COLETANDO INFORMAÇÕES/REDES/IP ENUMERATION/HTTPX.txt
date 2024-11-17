@@ -1,0 +1,7 @@
+ENUMERAÇÃO DE IPS COM HTTPX.
+	
+	COMANDO: cat subsurl | httpx -silent -ip
+	
+		IRÁ MOSTRAR O DOMINIO E SEUS RESPECTIVOS IPS, CASO QUEIRA FILTRAR SOMENTE OS IPS.
+		
+		USE: cat subsurl | httpx -silent -ip | awk '{print $2}' | tr -d '[]'

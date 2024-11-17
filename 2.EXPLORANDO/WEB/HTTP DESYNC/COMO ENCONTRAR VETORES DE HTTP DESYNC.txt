@@ -1,0 +1,6 @@
+HTTP DESYNC são ataques que trabalham com a dessincronização, seja do lado do cliente ou seja entre servidores.
+
+As requisições que normalmente são vulneráveis a HTTP DESYNC são requisições que não estão esperando por um POST que normalmente são as que fazem redirecionamento interno pelo servidor, ou seja requisições que em sua resposta tem o Location como header e redirecionando para outro endpoint, e requisições de arquivos estáticos, como JS e CSS.
+
+Outro fator muito comum nas vulnerabilidades de HTTP DESYNC é que elas normalmente são em HTTP/1.1, mas se a requisição estiver em HTTP/2 você pode
+tentar fazer o downgrade, mudando de 2 para 1.1 e enviando a requisição para ver se a aplicação aceita.

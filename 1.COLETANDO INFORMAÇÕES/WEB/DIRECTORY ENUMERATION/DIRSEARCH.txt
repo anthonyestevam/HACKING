@@ -1,0 +1,9 @@
+DIRSEARCH É UM FUZZER DE DIRETÓRIOS.	
+	
+	COMANDO: dirsearch -u <url> 
+	
+	-e: PODE USAR EXTENSÕES. EXEMPLO: -e php,json
+	
+	-w: ESCOLHE UMA WORDLIST.
+	
+	--full-url: VAI MOSTRAR A URL COMPLETA AO INVÉS DE APENAS O PATH.

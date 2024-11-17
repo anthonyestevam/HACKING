@@ -1,0 +1,12 @@
+SUBJS É UMA FERRAMENTA QUE ENUMERA JAVASCRIPTS.
+	
+	COMANDO: cat domains | httpx -silent | subjs
+	
+	O HTTPX VAI VALIDAR OS DOMINIOS E IRÁ PASSAR PARA
+	O SUBJS ENUMERAR.
+	
+	COMANDO PARA ENUMERAR APENAS UMA URL:
+		
+		echo <url> | subjs
+		
+	EX: echo https://site.com | subjs

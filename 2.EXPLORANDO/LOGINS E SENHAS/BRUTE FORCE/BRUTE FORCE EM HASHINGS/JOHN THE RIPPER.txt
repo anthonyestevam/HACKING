@@ -1,0 +1,20 @@
+O JOHN THE RIPPER É UMA FERRAMENTA DE BRUTE FORCING EM HASHINGS, PODENDO SER USADA OFFLINE.
+	
+		1.CRIAR UM ARQUIVO TXT
+		
+		2. COLOCAR NO TERMINAL:
+			
+			COMANDO: john <arquivo.txt>
+			
+		PARÂMETROS PARA FACILITAR O JOHN:
+			
+			--wordlist=<caminho_wordlist> : IRÁ QUEBRAR A SENHA COM UMA WORDLIST ESPECIFICA
+			
+			--format=<modelo_hashing>: É USADO PARA ESPECIFICAR O TIPO DE HASHING QUE ESTÁ NA SENHA
+				
+				EX: john arquivo.txt --format=raw-md5
+				
+			--show: USADO PARA MOSTRAR A SENHA LOGO APÓS SER QUEBRADA.
+				
+				EX: john arquivo.txt --show
+			

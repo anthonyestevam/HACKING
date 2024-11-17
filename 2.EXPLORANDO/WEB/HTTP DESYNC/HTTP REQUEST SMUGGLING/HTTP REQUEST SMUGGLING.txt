@@ -1,0 +1,68 @@
+HTTP REQUEST SMUGGLING
+
+HTTP REQUEST SMUGGLING é  o contrabando de solicitação que ocorre quando se usa o HTTP/1.1 porque existem 2 metodos de falar a quantidade do conteúdo
+que seria o Content-Length e o Transfer-Encoding e pode ocorrer a dessincronização quando o front end aceita um e o backend aceita outro.
+
+Existe o CL.TE onde o front end aceita Content-Length e o Backend aceita o Transfer Encoding e o TE.CL que é ao contrário. Por CL.TE ser mais comum, será abordado ele.
+
+Primeiros Passos:
+
+1.Envie a requisição para o Repeater.
+
+2.Veja se o HTTP é 1.1 caso não seja tente fazer o downgrade.
+
+3.Altere a requisição de Get pra Post, clicando com o botão direito e clique em change request method.
+
+4.Desative o Content Length clicando na engrenagem ao lado do send e desativando o Update Content Length.
+
+5.Analise se a Connection está em keep-alive, caso esteja em close, altere para keep-alive e teste para saber se o servidor aceita.
+
+Teste CL.TE:
+
+1.No corpo da requisição coloque um 0, pule uma linha de distância e coloque um X, ou qualquer outro caracter
+
+2.No Content Length coloque o total de caracteres que há dentro do body.
+
+3.Crie o header do Transfer Encoding com o valor chunked.
+
+Ex:
+POST / HTTP/1.1
+Host: Example.com
+Content-Length: 6
+Transfer-Encoding: chunked
+
+0
+
+X
+
+4.Envie a mesma requisição que você enviou para o repeater novamente.
+
+5.Crie um Group Tab, sendo a primeira a requisição que alterou e a segunda a original.
+
+6.Na seta ao lado de Send clique e clique em Single Connection.
+
+7.Clique em Send Group
+
+8.Caso tenha dado tudo certo a primeira requisição terá sido enviada normalmente e a segunda deverá ter dado um erro: METHOD NOT ALLOWED. Caso a segunda não dê o erro de METHOD NOT ALLOWED pode ser que é porque ela siga o RFC então você pode tentar bypass.
+
+BYPASS:
+
+Pode Ocorrer de o frontend e o backend seguirem a RFC que seria onde o primeiro header seria aceito e o segundo ignorado, então se o front end e o backend seguirem o rfc, o ataque pode não funcionar pois quando chegar ao backend, o backend pode ignorar o Transfer-Encoding porque está depois do Content-Lenght. Então tem formas de bypass para isso.
+
+1.Altere a ordem do Content-Lenght e o Transfer-Encoding, deixando o Transfer-Encoding primeiro e depois o Content-Lenght
+e você pode dar um espaço entre os 2 pontos e o Transfer-Encoding.
+
+Ex: 
+
+POST / HTTP/1.1
+Host: Example.com
+Transfer-Encoding : chunked
+Content-Length: 6
+
+0
+
+X
+
+Ou então dando um tab no lugar do espaço do chunked e os 2 pontos.
+
+Sendo: Transfer-Encoding:[Tab]chunked

@@ -1,0 +1,18 @@
+O ASNMAP É UMA FERRAMENTA DE ENUMERAÇÃO DE ASN.
+
+	1.VÁ NO SITE DA PROJECTDISCOVERY.
+	
+	2.CRIE UMA CONTA E COPIE O TOKEN DA SUA CONTA.
+	
+	3.USE O COMANDO: asnmap -auth.
+	
+	4.COLE O TOKEN QUANDO PEDIR E DÊ ENTER.
+	
+	COMANDO: asnmap -d <domain>
+	
+		 asnmap -i <ip>
+		 
+		 TAMBÉM PODE SE UTILIZAR O XARGS PARA AUTOMATIZAR ESSA PROCURA EM VÁRIOS DOMINIOS
+		 OU SUBDOMINIOS.
+		 
+		 COMANDO: xargs -a subsvalid -I@ sh -c "asnmap -d @ -silent | anew asn"

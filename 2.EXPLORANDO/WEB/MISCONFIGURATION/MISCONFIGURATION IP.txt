@@ -1,0 +1,15 @@
+UMA FALHA DE MISCONFIGURATION ORIGIN IP É UMA FALHA QUE OCORRE QUANDO VOCÊ CONSEGUE ACESSAR O IP ORIGINAL DE UMA APLICAÇÃO QUE UTILIZA CLOUDFLARE POR EXEMPLO.
+	
+	1.COLETE SUBDOMINIOS.
+	
+	2.USE O DNSX: cat subs.txt | dnsx -a -silent -resp-only >> ips.txt
+	
+	3.USE UM LAÇO: while read ip; do
+  if ! whois $ip | grep -q "Cloudflare"; then
+    echo "Possível IP de origem encontrado: $ip" |
+    
+    	4.OUTRA FORMA SERIA ACESSANDO IP POR IP E USAR O WAPPALYZER PARA VER SE TEM ALGUM PROXY NA FRENTE.
+	
+	
+	
+	

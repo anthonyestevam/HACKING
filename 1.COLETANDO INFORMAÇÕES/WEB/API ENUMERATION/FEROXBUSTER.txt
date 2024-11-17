@@ -1,0 +1,5 @@
+O FEROXBUSTER É UM FUZZER QUE PODE SER UTILIZADO PARA FAZER ANUMERAÇÃO DE APIs.
+	
+	COMANDO: feroxbuster -u <url> -w <wordlist> --silent | grep 200 | grep 302 | awk '{print $6}'
+	
+	PODE FAZER ESSA ENUMERAÇÃO UTILIZANDO A WORDLIST DE ASSETNOTES

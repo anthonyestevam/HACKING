@@ -1,0 +1,12 @@
+O DNSRECON É USADO PARA ENUMERAÇÃO DE DOMÍNIOS E CONSULTAS DNS.
+
+	-d nome_do_dominio: DOMÍNIO A SER TESTADO.
+	
+	-D nome_da_wordlist: LISTA PALAVRAS A SEREM USADAS NO PROCESSO DE ADVINHAÇÃO DO DOMINIO.
+	
+	-t nome_do_registro: TIPO DE REGISTRO A SER USADO.
+	
+	EX: 
+	    dnsrecon -d kali.com.br
+	
+	    dnsrecon -d kali.com.br -D /root/wordlist -t brt

