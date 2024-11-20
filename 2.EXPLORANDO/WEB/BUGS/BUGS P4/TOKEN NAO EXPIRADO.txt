@@ -1,0 +1,22 @@
+Existem vários tipos de tokens que são usados ​​por um site, como token de redefinição de senha, token de verificação, token de convite de usuário, etc. Se esses tipos de token não expirarem após o uso ou se você puder usá-los várias vezes, então é um bug.
+
+Critérios — após usar o token de verificação, a conta deve ser aberta diretamente, sem solicitar credenciais.
+
+É hora de criar um POC para isso.
+
+Descrição:- O token de redefinição de senha não expira após um único uso.
+
+Passos para reproduzir:
+
+1.Abra a URL  https://site.com.
+
+2.Ir para a página Esqueceu a senha
+
+3.Insira seu e-mail e você receberá um link de redefinição.
+
+4.Altere a senha várias vezes usando o mesmo link de redefinição.
+
+A senha é alterada toda vez.
+
+Impacto:
+O invasor pode reutilizar o token de redefinição do usuário e atualizar a senha, o que levaria à tomada de conta

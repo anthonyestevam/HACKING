@@ -1,0 +1,24 @@
+Multiple Account With Same Email. Esse bug pode ocorrer em um chatbot da intercom.
+
+1.Vá na página  que tenha um chatbot.
+
+2.Abra o Wappalyzer e veja se tem o intercom no Live Chat.
+
+3.Abra o chatbot e fale coisas como seu nome, seu email e sua senha.
+
+Ex: "meu email é email@email.com" "meu nome é Edi"
+
+4.Feche o chat e abra uma nova aba no modo anônimo.
+
+5.Após carregar a página, abra o inspecionar elementos e vá no console.
+
+6.Digite "Allow pasting" no console.
+
+7.Digite o comando: Intercom(‘boot’, { email: ‘<email_colocado_no_chatbot_anteriormente>’ });
+
+Se retornar o mesmo chat que tinha sido fechado anteriormente mostrando a conversa que você mandou seu nome, email e senha então é um bug.
+
+Caso queira aumentar a criticidade do bug, use o site email-finder ou o hunter para coletar emails do dominio e tente usar o mesmo código que usou com seu email, mas com os emails coletados e veja se retorna algum chat ja feito.
+
+Impacto: O invasor pode fazer enumeração de emails e procurar por chats desses email, afim de encontrar informações sensíveis.
+
