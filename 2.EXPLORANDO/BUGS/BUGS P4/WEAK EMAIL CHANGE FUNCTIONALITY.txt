@@ -1,0 +1,11 @@
+Weak Email Change Functionality é um bug simples que ocorre quando você pode alterar o email sem pedir senha.
+
+Passos: 
+
+1.Acesse sua conta.
+
+2.Vá em alterar o email.
+
+Caso consiga alterar o email e a aplicação não peça senha para isso... é um bug.
+
+Impacto: Um invasor que consiga ter acesso á conta, como por exemplo acessar o computador de um usuário que não saiu da conta, pode conseguir alterar o email da vitima, enviar um link de alteração de senha e ter um account takeover sem precisar saber a senha da vitima.

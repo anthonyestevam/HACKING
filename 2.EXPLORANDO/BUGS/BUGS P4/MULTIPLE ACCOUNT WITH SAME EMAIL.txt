@@ -1,0 +1,13 @@
+Esse bug é simples de ser explorado.
+
+Passos:
+
+1.Crie uma conta com um email. Por exemplo email@email.com
+
+2.Tente criar outra conta com o mesmo email.
+
+3.Caso consiga é um bug, caso não consiga tente criar a conta com o mesmo email novamente, mas com um +Foo ou +1 no email. Por exemplo: email+1@email.com
+
+Impacto: O atacante pode conseguir um Account Takeover dessa forma.
+
+Perca de confiança dos usuários na plataforma.

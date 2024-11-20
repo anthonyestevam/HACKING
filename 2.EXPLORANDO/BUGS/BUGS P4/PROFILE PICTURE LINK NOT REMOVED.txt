@@ -1,0 +1,16 @@
+Esse bug é bem simples de ser executado.
+
+1.Crie uma conta.
+
+2.Adicione uma foto de perfil.
+
+3.Copie o link da foto de perfil e abra em outra janela.
+
+4.Vá em deletar a foto de perfil.
+
+5.Atualize a página da foto de perfil que foi aberta na outra janela.
+
+Se ela continuar disponível é um bug.
+
+Impacto:  Se sua foto contiver alguma informação sensível, um hacker pode roubar essa informação usando esse link. O que aconteceu? Sua imagem contém informações confidenciais, como senha, detalhes de cartão de crédito e e-mails, número de telefone e endereço. Depois de remover esta imagem como sua foto de perfil, o invasor ainda poderá ver suas informações.
+

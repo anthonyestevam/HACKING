@@ -1,0 +1,20 @@
+Para testar esse bug, primeiro abra dois navegadores ou um navegador na aba anônima para que não haja troca de cookies. Então, faça login na sua conta nessas abas/navegadores usando a mesma conta. Agora, altere a senha da sua conta ou redefina a senha da sua conta e verifique o segundo navegador/aba se a sua segunda aba/conta do navegador for desconectada, então não é um bug, mas se você ainda fizer login na sua conta após redefinir/alterar a senha, significa que a sessão do site não está terminando após redefinir ou alterar a senha e é um bug P4.
+
+Ótimo, você pegou outro bug p4, vamos fazer poc…
+
+Descrição: A falha em invalidar uma sessão após uma alteração de senha é uma vulnerabilidade que permite que um invasor mantenha o acesso a um serviço. A maioria dos usuários tem a expectativa de que, quando redefinirem sua senha, ninguém mais poderá acessar sua conta.
+
+Passos para reproduzir:
+
+1.Crie uma conta em https://site.com.
+
+2.Faça login usando credenciais em 2 navegadores.
+
+3.Abra o perfil/configurações.
+
+3.Vá em Alterar senha e altere a senha no Navegador 1
+4.Acesse o Navegador 2 e edite os dados do perfil (nome/número de contato/foto do perfil) e clique em salvar.
+
+5.Atualize a página uma vez e os dados serão alterados
+
+Impacto: Essa vulnerabilidade pode causar danos à reputação e perdas financeiras indiretas para a empresa, pois os clientes podem considerar o aplicativo inseguro.

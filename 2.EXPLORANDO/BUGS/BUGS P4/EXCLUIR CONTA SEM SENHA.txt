@@ -1,0 +1,18 @@
+Esse bug é muito fácil, pois podemos entendê-lo pelo seu nome. Então, quando excluímos nossa conta de um site e ele pede a senha da conta, mas em alguns sites quando clicamos em excluir conta, nossa conta é excluída diretamente sem senha, então é considerado um bug.
+
+Agora, acho que você encontrou esse bug, então é hora de criar seu relatório...
+
+Descrição:- A remoção de uma conta é uma das partes sensíveis de um aplicativo web que precisa ser protegida, portanto, excluir uma conta deve validar a autenticidade do usuário.
+
+Passos para reproduzir:
+
+1.Acesse o site e faça login na sua conta.
+
+2.Vá para a seção perfil/configurações.
+
+3.Um botão para excluir conta será exibido.
+
+4.Clique no botão excluir e sua conta será excluída com sucesso.
+
+Impacto:
+O alvo não verifica a solicitação com um OTP ou senha válidos antes de acionar o Direito de Acesso/Exclusão e permite que um invasor exclua Contas de Usuário sem interação do usuário.
