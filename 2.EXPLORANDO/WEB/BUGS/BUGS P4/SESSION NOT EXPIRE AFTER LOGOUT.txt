@@ -1,0 +1,21 @@
+um bug simples de ser encontrado. Ocorre quando você faz logout da sua conta, mas os cookies não expiram, então você consegue logar na conta de novo utilizando os cookies.
+
+Passos:
+
+1.Logue na aplicação 
+
+2.Use uma extensão que manipula Cookies como o “Cookie Editor” ou o “EditThisCookie” e clique em exportar todos os Cookies.
+
+3.Faça Log-out da conta.
+
+4.Vá na extensão e clique em deletar todos os cookies.
+
+5.Vá em importar Cookies e cole todos os cookies que foram exportados.
+
+6.Clique em atualizar a página.
+
+Se quando atualizar a página, você ficar logado na conta, é um bug.
+
+Você também pode utilizar o Burp Suite para testar esse bug
+
+Impacto: Se um usuário malicioso conseguir os cookies da vitima, por exemplo explorando alguma vulnerabilidade, ele poderá fazer login na conta da vítima.
