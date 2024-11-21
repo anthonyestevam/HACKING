@@ -1,0 +1,24 @@
+Neste bug, se algum link estiver quebrado ou disponível para aquisição, então é considerado uma vulnerabilidade. Deixe-me explicar em palavras simples, como se houvesse um site no qual há links de contas de mídia social da empresa disponíveis, digamos que a empresa excluiu sua conta do Twitter para o Twitter, mas o link ainda está disponível na página da web e está apontando para a conta do Twitter que a empresa excluiu. Agora, vamos supor que o nome de usuário da conta do Twitter da empresa seja xxyyzz e, após a exclusão, esse nome de usuário agora esteja disponível para aquisição e você, como hacker, criou uma nova conta do Twitter com o nome de usuário xxyyzz.
+
+Agora, quando você visita o site da empresa e clica no perfil do Twitter, bum, você é redirecionado para sua conta do Twitter que você criou com o nome de usuário xxyyzz.
+
+Critérios — Somente links quebrados são aceitos neste bug e são gerenciados pela organização
+
+Hora do poc…
+
+Descrição:- Broken link hijacking (BLH) é um tipo de ataque da web. Ele explora links externos que não são mais válidos. Se seu site ou aplicativo da web usa recursos carregados de URLs externas ou aponta para tais recursos e esses recursos não estão mais lá (por exemplo, devido a um domínio expirado), os invasores podem explorar esses links para executar defacement, personificação ou até mesmo lançar ataques de cross-site scripting.
+
+Passos para reproduzir:-
+
+1.Abra o link  https://www.website.com
+
+2.Clique nos ícones de mídia social como — Twitter / Facebook / Instagram, etc.
+
+3.Caso contrário a conta não será criada, retornará — PÁGINA NÃO ENCONTRADA ou CONTA NÃO ENCONTRADA
+
+O invasor pode criar uma conta com o nome da empresa.
+
+Outra forma de encontrar por esses links quebrados é utilizando um site chamado Broken Link Checker, nele você coloca o dominio desejado e clique em Find. Ele começará a escanear o dominio. Clique em STOP quando quiser que pare a coleta.
+
+Impacto:
+Um invasor pode criar uma conta na plataforma de mídia social com esse nome de usuário e personificar/usar indevidamente o nome da empresa.
