@@ -1,0 +1,41 @@
+Geralmente encontramos e-mails de empresas no site deles e, se o registro SPF e DMARC não for publicado para o ID de e-mail deles, ele fica vulnerável a ataques de falsificação de e-mail.
+
+Como verificar se o registro SPF e DMARC está publicado ou não? Verifique aqui
+
+Registro SPF — https://www.kitterman.com/spf/validate.html
+
+Registro DMARC — https://mxtoolbox.com/
+
+Critérios: Esses bugs podem estar fora do escopo da plataforma, portanto leia o escopo completo antes de enviar.
+
+Hora de criar o relatório….
+
+Para SPF….
+
+Descrição:- O Sender Policy Framework (SPF) é um protocolo de autenticação de e-mail e parte da segurança cibernética de e-mail usado para impedir ataques de phishing.
+
+Passos para reproduzir:
+
+1.Visita — https://www.kitterman.com/spf/validate.html.
+
+2.Insira o nome do domínio — target.com e clique em obter registro SPF.
+
+3.O nome de domínio mostrará Nenhum registro SPF válido encontrado.
+
+Impacto:
+Os spammers podem falsificar o endereço “De” em mensagens de e-mail para fazer com que as mensagens pareçam vir de alguém em seu domínio. Se os spammers usarem seu domínio para enviar spam ou lixo eletrônico, a qualidade do seu domínio será afetada negativamente. As pessoas que recebem os e-mails falsificados podem marcá-los como spam ou lixo eletrônico, o que pode impactar mensagens autênticas enviadas de seu domínio.
+
+Para DMARC…
+
+Descrição: DMARC (Domain-based Message Authentication, Reporting, and Conformance) é um protocolo de autenticação de e-mail. Ele foi criado para dar aos proprietários de domínios de e-mail a capacidade de proteger seus domínios contra uso não autorizado, comumente conhecido como spoofing de e-mail.
+
+Passos para reproduzir:
+
+1.Visita — https://mxtoolbox.com
+
+2.Digite o nome do domínio — target.com e clique em ir
+
+3.O nome de domínio mostrará Nenhum registro DMARC encontrado
+
+Impacto:
+Os spammers podem falsificar o endereço “De” em mensagens de e-mail para fazer com que as mensagens pareçam vir de alguém em seu domínio. Se os spammers usarem seu domínio para enviar spam ou lixo eletrônico, a qualidade do seu domínio será afetada negativamente. As pessoas que recebem os e-mails falsificados podem marcá-los como spam ou lixo eletrônico, o que pode impactar mensagens autênticas enviadas de seu domínio.
