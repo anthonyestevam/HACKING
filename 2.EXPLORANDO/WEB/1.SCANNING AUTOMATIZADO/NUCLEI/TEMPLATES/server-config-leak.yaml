@@ -1,0 +1,21 @@
+id: server-config-leak
+info:
+  name: Server Configuration Leak
+  author: Alexandre Araujo (RaDiTZz)
+  severity: low
+  description: The application returns an error leaking information about the server settings and also the web.config configuration file. The error message can reveal sensitive information that can be used by an attacker to mount new attacks or to expand the attack surface, and more the data can be disclosed (such as the web.config configuration file that can potentially leak more information) and will also help the attacker to understand how the internal application works and will help the attacker in a possible explotation in the System.
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/:;:;"
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - "Server Error in '/' Application."
+          - "Web.Config Configuration File"
+          - "<customErrors mode="
+          - "Runtime Error"
+        part: body

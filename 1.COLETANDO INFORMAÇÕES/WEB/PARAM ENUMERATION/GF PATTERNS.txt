@@ -1,0 +1,29 @@
+GF PATTERNS É UMA FERRAMENTA QUE TEM ALGUNS ARQUIVOS COM PARÂMETROS
+COMUNS DE VULNERABILIDADES COMO XSS, SSRF, IDOR, OPEN REDIRECT, ETC...
+	
+	ESSA FERRAMENTA É COMUMENTE USADA COM FERRAMENTAS COMO O GAU OU
+	WAYBACKURLS E O URO PARA FILTRAR AS URLs ENCONTRADAS E MOSTRAR APENAS AS QUE CONTÉM
+	PARÂMETROS QUE APARECEM COMUMENTE NA DETERMINADA VULNERABILIDADE ESCOLHIDA.
+		
+		NO GF TEM AS PATTERNS: xss, ssrf, redirect, rce, idor, lfi, ETC...
+		
+		COMO USAR:
+			
+			PARA USAR O GF É BEM SIMPLES, VOCÊ IRÁ USAR O PIPE '|' E COLOCAR
+			ELE APÓS O PIPE.
+			
+			COMANDO: echo <dominio> | waybackurls | uro | gf <pattern>
+						
+						OU
+						
+				echo <dominio | gau | uro | gf <pattern>
+			
+			EX: echo site.com | waybackurls | uro | gf ssrf
+				
+					OU
+					
+			    echo site.com | gau | uro | gf xss
+			    
+			    
+			    APÓS O USO APARECERÁ TODAS AS URLs QUE TEM A POSSIBILIDADE DE SER
+			    VULNERÁVEL Á VULNERABILIDADE ESCOLHIDA NO GF.

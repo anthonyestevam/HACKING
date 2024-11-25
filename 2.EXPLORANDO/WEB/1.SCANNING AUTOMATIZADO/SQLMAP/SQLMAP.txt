@@ -1,0 +1,15 @@
+O SQLMAP É UMA FERRAMENTA QUE TESTA SQL INJECTION DE FORMA AUTOMÁTICA.
+	
+	COMANDO sqlmap -u <url>
+	
+	PODE SE TESTAR EM UM ARQUIVO QUE CONTENHA URLs.
+	
+	COMAND: sqlmap -m <arquivo> --batch --random-agent --level 3
+	
+	O --batch ACEITA TODAS AS PERGUNTAS E O --level É O NIVEL DE PROFUNDIDADE QUE VAI SER
+	O TESTE.
+	
+	EXTRA: VOCÊ PODE TESTAR UM SITE COM UMA LINHA ÚNICA.
+	
+	COMANDO: echo site.com | subfinder -all -silent | httpx -silent | hakrawler | gf sqli > sqli ; 
+	sqlmap -m sqli --batch --random-agent --level 3

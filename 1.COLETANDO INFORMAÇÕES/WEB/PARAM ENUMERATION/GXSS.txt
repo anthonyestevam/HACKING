@@ -1,0 +1,18 @@
+O GXSS TESTA URLs COM PARÂMETROS PARA ANALISAR SE SÃO REFLETIDAS NO CÓDIGO DO SITE,
+AS URLs QUE SÃO REFLETIDAS, NORMALMENTE PODEM TER VULNERABILIDADE XSS, SSTI, SQLI.
+	
+	COMANDOS: echo http://site.com/search=item | Gxss : PARA TESTAR UMA URL ÚNICA.
+	
+		  cat params.txt | Gxss | PARA TESTAR DIVERSAS URLs DENTRO DE UM ARQUIVO.
+	
+	VOCÊ TAMBÉM PODE COLOCAR PAYLOADS PERSONALIZADOS DENTRO DAS URLs
+		
+		POR EXEMPLO A URL: https://site.com/search=item
+		
+		USANDO O PARÂMETRO -P PODE SE INJETAR A PAYLOAD.
+		
+		EX: echo "https://site.com/search=item" | Gxss -p <script>alert('oi')</script>
+		
+		A URL APARECERÁ COMO:  https://site.com/search=<script>alert('oi')</script>
+		
+		BASTA COPIA-LÁ E COLAR ELA NO NAVEGADOR PARA CHECAR SE O PAYLOAD FOI REFLETIDO.

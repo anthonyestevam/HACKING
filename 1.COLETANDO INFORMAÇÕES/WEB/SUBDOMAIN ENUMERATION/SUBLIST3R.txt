@@ -1,0 +1,6 @@
+O SUBFLIST3R É UMA FERRAMENTA QUE ENUMERA SUBDOMÍNIOS DE UM DOMINIO.
+
+	COMANDOS:
+		sublist3r -d <dominio_alvo> 
+		
+		EX: sublist3r -d exemplo.com

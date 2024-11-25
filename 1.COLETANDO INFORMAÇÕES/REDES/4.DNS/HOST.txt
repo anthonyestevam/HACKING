@@ -1,0 +1,5 @@
+O HOST MOSTRA OS IPs DE UM DOMINIO.
+	
+	COMANDO: host seusite.com
+		
+		EX: host google.com

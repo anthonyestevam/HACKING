@@ -1,0 +1,8 @@
+OPENREDIREX É UMA FERRAMENTA QUE AUTOMATIZA OS TESTES DE OPENREDIRECT.
+	
+	 COMANDOS: cat urls | openredirex : TESTARÁ TODAS AS URLs DENTRO DO ARQUIVO.
+	 
+	 	   echo "https://site.com/?redirect=https://site2.com" | openredirex : TESTARÁ
+	 	   SE A URL É VULNERÁVEL.
+	 	   
+	 	   CASO ENCONTRE UM OPEN REDIRECT APARECERÁ UM "[FOUND]' AO LADO DA URL.

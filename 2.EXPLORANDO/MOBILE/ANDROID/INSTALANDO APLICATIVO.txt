@@ -1,0 +1,12 @@
+INSTALANDO APLICATIVO DENTRO DO APARELHO EMULADO PELO GENYMOTION.
+
+	1.BAIXE O APK DO APLICATIVO NO SEU PC.
+
+	2.ABRA O SEU APARELHO EMULADO PELO GENYMOTION
+	
+	3.ABRA SEU TERMINAL.
+	
+	3. DIGITE O COMANDO: adb install <arquivo_apk>
+	Obs: Caso você tenha mais de um dispositivo conectado no adb, use: adb <ip:port_dispositivo> install <arquivo_apk>
+	
+	O APLICATIVO SERÁ INSTALADO DENTRO DO SEU APARELHO.

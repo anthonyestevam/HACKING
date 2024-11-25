@@ -1,0 +1,42 @@
+2FA é uma autenticação de 2 fatores, que normalmente no segundo fator, você receberá um código por SMS ou Email e deve inseri-lo. A vulnerabilidade ocorre quando não se tem um rate limit nas tentativas de código, quando se pode usar um código antigo ou quando consegue fazer bypass nele.
+
+Passos:
+
+1.Logue na conta
+
+2.Digite um código aleatório no segundo fator e intercepte a requisição quando enviar.
+
+No Rate Limit:
+
+1.Envie a requisição para o repeater e clique em Send varias vezes.
+
+Caso não receba um bloqueio do Servidor por muitas tentativas, significa que está vulnerável á Brute Force.
+
+Impacto: Um Hacker pode fazer brute force em um código usando uma automação e assim conseguir acessar a conta.
+
+Uso de Código Antigo:
+
+1.Após ser enviado o primeiro código, clique na opção de reenviar código.
+
+2.Tente usar o primeiro código enviado.
+
+Se aceitar é um bug.
+
+Impacto: Um atacante que intercepte ou obtenha um código anterior (por phishing, malware, ou outro vetor) pode usá-lo para acessar a conta, especialmente se o código não expirar ou puder ser reutilizado após o envio de um novo.
+
+Isso compromete a premissa de que o 2FA gera códigos de uso único e de curta duração.
+
+Bypass:
+
+1.Envie para o Repeater a requisição interceptada.
+
+2.Analise ela e tente alterá-la.
+
+Ex: 
+Tente apagar o parâmetro do código. 
+
+Tente apagar apenas o valor do parâmetro.
+
+Se algum campo estiver como false tente alterar para True e vice versa.
+
+Impacto: Um agente malicioso consegue acessar uma conta que contém 2FA ignorando o segundo fator.

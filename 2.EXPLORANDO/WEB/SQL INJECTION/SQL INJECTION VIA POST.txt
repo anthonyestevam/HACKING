@@ -1,0 +1,26 @@
+SQLMAP VIA POST:
+		
+		1.ENVIAR UMA REQUISIÇÃO EM UM FORMULARIO
+			OBS: A requisição enviada tem que dar código 200, para poder prosseguir com ela,
+			ou seja é necessário que use um login válido para poder fazer o sql injection via post.
+		
+		2.IR EM INSPECIONAR
+		
+		3.IR EM NETWORK.
+		
+		4.IR NA REQUISIÇÃO ENVIADA
+		
+		5.IR EM EDIT AND RESEND
+		
+		6.COPIE O HEADER E O BODY.
+		
+		7.COLOQUE EM UM ARQUIVO TXT.
+		
+		8.NA PRIMEIRA LINHA COLOQUE O METODO POST, O PARÂMETRO DO SITE QUE ESTA O FORMULARIO E UM 
+		HTTP/1.1
+		
+			EX: POST /login.php HTTP/1.1
+			
+		9.FAÇA O SQLI COM O SQLMAP.
+			
+			COMANDO: sqlmap -r arquivo.txt --dbs

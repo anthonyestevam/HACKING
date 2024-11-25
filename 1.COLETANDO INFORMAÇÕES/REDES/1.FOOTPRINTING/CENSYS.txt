@@ -1,0 +1,27 @@
+CENSYS É UM SITE QUE PODE SER USADO PARA ENCONTRAR CÂMERAS OU OUTRAS INFORMAÇÕES E MÁQUINAS ATIVAS.	
+	
+		SITE CENSYS:
+			
+			search.censys.io
+			
+			DORKS PARA PESQUISA:
+				
+				location.country: FILTRA DETERMINADO PAÍS. EX: location.country:"Brazil"
+				
+				location.city: FILTRA DETERMINADA CIDADE.
+				
+				and: USADO PARA CONCATERNAR OS PARÂMETROS DE PESQUISA. 
+				
+					EX: location.country:"Brazil" and services.port:25 
+				
+				services.port: FILTRA UM DETERMINADA PORTA, PODENDO
+				PROCURAR POR UMA PORTA PADRÃO DE DETERMINADO SERVIÇO. EX: services.port: 25
+				
+				autonomous_system.organization: FILTRA DETERMINADA ORGANIZAÇÃO. 
+					
+					EX: autonomous_system.organization:"Facebook"
+					
+					
+			DICA: O CENSYS TEM SUGESTÕES DE PESQUISA, ENTÃO PODE SE USAR NOMES PEQUENOS PARA ACHAR
+			O PARÂMETRO QUE DESEJA SER USADO. EXEMPO DE NOMES PEQUENOS: location, org, port.
+			E CLICAR NA OPÇÃO DESEJADA PARA COMPLETAR O NOME DO PARÂMETRO.		

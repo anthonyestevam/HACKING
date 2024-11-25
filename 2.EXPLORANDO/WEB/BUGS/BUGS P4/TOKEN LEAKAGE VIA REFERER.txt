@@ -1,0 +1,20 @@
+
+Token Leakage via Referer é um bug que ocorre quando seu token é vazado no header referer.
+
+Passos:
+
+1.Vá em Esqueceu sua senha.
+
+2.Vá no email que foi enviado para alterar a senha.
+
+3.Entre no link
+
+4.Clique em alguma opção que estiver disponível na página que redirecione para outro site, como página de redes sociais, etc… 
+
+5.Intercepte essa requisição.
+
+6.Veja se no Header Referer tem seu token vazado.
+
+Impacto: Se o Referer for enviado a um site ou serviço externo (como provedores de anúncios, CDNs ou serviços de analytics), o token pode ser interceptado e usado por terceiros mal-intencionados.
+
+Um atacante que obtiver o token pode usá-lo para redefinir a senha da vítima e assumir o controle da conta.

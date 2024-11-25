@@ -1,0 +1,5 @@
+403BYPASS É UMA FERRAMENTA QUE FOI INSPIRADA NO 4XXBYPASS.
+
+	COMANDO: echo <url> | 403bypass
+		 
+		 cat urls403.txt | 403bypass

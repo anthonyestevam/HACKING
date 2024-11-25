@@ -1,0 +1,7 @@
+PROTOSCAN É UMA FERRAMENTA PARA ENCONTRAR VULNERABILIDADES DE PROTOTYPE POLLUTION.
+	
+	COMANDO: echo https://site.com/ | protoscan -u
+	
+	OU CASO QUEIRA USAR COM UM ARQUIVO, UTILIZE O XARGS:
+		
+		xargs -a file.txt -I@ sh -c " echo @ | protoscan -u "

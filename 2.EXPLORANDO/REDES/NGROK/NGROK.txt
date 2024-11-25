@@ -1,0 +1,36 @@
+
+	1. USAR O CÓDIGO 'tar -xzf nomedoarquivo'
+	
+	2. COPIAR O TOKEN DE AUTENTICAÇÃO NO SITE
+	
+	3.COLAR NO TERMINAL.
+		
+		COMANDO: ./ngrok token_autenticação
+		
+	TUNELANDO SERVIDOR HTTP:
+		
+		1.ABRIR UM SERVIDOR.
+		
+			SERVIDOR PYTHON COMANDO: python3 -m http.server porta_desejada
+	
+		2. USAR O NGROK PARA TUNELAR O SERVIDOR ABERTO.
+		
+			./ngrok http número_da_porta_do_servidor	
+	
+	 		EX: ./ngrok http 8000.
+	
+		3.USAR A URL DO FORWADING
+		
+	TUNELANDO CONEXÃO TCP:
+		
+		1.USAR O NGROK PARA TUNELAR UMA PORTA TCP.
+			
+			COMANDO: ./ngrok tcp porta_desejada
+			
+		2.USAR A URL FORWARDING PARA A CONEXÃO, TIRANDO ALGUNS DETALHES.
+			
+			EX DE URL: tcp://0.tcp.sa.ngrok.io:13281 
+			
+			MODFICAR PARA: 0.tcp.sa.ngrok.io 13281 
+			
+			EX DE CONEXÃO NETCAT COM A URL: nc 0.tcp.sa.ngrok.io 13281

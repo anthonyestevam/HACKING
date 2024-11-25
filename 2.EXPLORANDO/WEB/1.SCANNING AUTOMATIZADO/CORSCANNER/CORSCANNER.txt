@@ -1,0 +1,5 @@
+CORSCANNER É UMA TOOL QUE TESTA O CORS DAS URLS E MOSTRA AS QUE ESTÃO INSEGURAS.
+	
+	COMANDO: corscanner -i urls.txt : PARA UM ARQUIVO COM URLS.
+	
+		 corscanner -u https://site.com : PARA URL ÚNICA.

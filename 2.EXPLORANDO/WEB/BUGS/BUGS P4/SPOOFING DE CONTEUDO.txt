@@ -1,0 +1,15 @@
+Esse bug é simples, como em qualquer página de autenticação, quando fazemos alterações na URL e isso é refletido no lado do cliente, então é um bug. Por exemplo, se houver uma URL como https://example.com/login.php?error=access-denied e você alterar esse erro para example.com/login.php?error=you%20are%20hacked, então é um P4.
+
+Então, acho que você entendeu, ótimo, é hora de fazer poc..
+
+Descrição:- O Content Spoofing permite que o usuário final do aplicativo web vulnerável falsifique ou modifique o conteúdo real na página web. Isso apresenta ao usuário uma página modificada sob o contexto do domínio confiável. Esse ataque é normalmente usado como, ou em conjunto com, engenharia social porque o ataque está explorando uma vulnerabilidade baseada em código e a confiança do usuário.
+
+Passos para reproduzir:-
+
+1.Vá para example.com
+
+2.Então, basta alterar a URL acima como esta https://example.com/wp-login.php?error=access_denied para https://example.com/wp-login.php?error=you%20are%20hacked
+
+3.Clique em Enter e a massagem foi refletida na página.
+
+Impacto: O site está renderizando os dados de URL para o lado do cliente, o que pode ajudar a induzir o usuário a inserir os dados em outro lugar.

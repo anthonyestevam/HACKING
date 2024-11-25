@@ -1,0 +1,3 @@
+O XURLFIND3R É UMA FERRAMENTA QUE ENUMERA URLs.
+	
+	COMANDO: xurlfind3r -d <dominio>

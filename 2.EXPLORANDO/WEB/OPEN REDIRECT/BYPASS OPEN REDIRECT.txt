@@ -1,0 +1,25 @@
+EXISTEM ALGUMAS FORMAS DE FAZER BYPASS EM UMA URL E CONSEGUIR UM OPEN REDIRECT.
+	
+	URL: https://site.com/redirect=https://site.com
+	
+	FORMAS DE BYPASS:
+		
+		1.USANDO UM %40, %2e OU %23
+		
+		EX: https://site.com/redirect=https://site.com%2ehttps://malicioso.com
+		
+		2.USANDO ? OU /?
+		
+		EX: https://site.com/redirect=https://malicioso.com/?https://site.com
+		
+		3.USANDO \
+		
+		EX: https://site.com/redirect=\malicioso.com
+		
+		4.COLOCANDO O SITE MALICIOSO NO FINAL.
+		
+		EX: https://site.com/redirect=https://site.comhttps://malicioso.com
+		
+		5.USANDO @
+		
+		EX:  https://site.com/redirect=https://site.com@https://malicioso.com

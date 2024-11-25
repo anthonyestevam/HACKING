@@ -1,0 +1,36 @@
+O SUBFINDER É UMA FERRAMENTA QUE ENUMERA SUBDOMÍNIOS.
+
+	COMANDOS:
+		subfinder -d <dominio_alvo> -all
+		
+		EX: subfinder -d exemplo.com -all
+		
+		subfinder --silent : O COMANDO SILENT NÃO MOSTRA O BANNER
+		DO SUBFINDER.
+		
+		APÓS ENCONTRAR SUBDOMINIOS, PODE SE REFAZER A ENUMERAÇÃO ENUMERANDO
+		SUBDOMINIOS DOS SUBDOMINIOS USANDO O XARGS PARA OTIMIZAR SEU TEMPO
+		
+	
+	        COMANDO: xargs -a <arquivo> -I@ sh -c "subfinder -d @ -all"
+	        
+	        EX: xargs -a subdomains -I@ sh -c "subfinder -d @ -all"
+	        
+	        VOCÊ PODE DAR UM UPGRADE EM SEU SUBFINDER PARA ENCONTRAR MUITO MAIS SUBDOMINIOS
+	        QUE ENCONTRARIA NORMALMENTE.
+	        
+	        1.ABRA O ARQUIVO DE CONFIGURAÇÃO DO SUBFINDER.
+	        	
+	        	COMANDO: nano .config/subfinder/provider-config.yaml
+	        	
+	        2.TENTE CRIAR CONTAS EM TODOAS AS POSSIVEIS QUE APARECEM NO ARQUIVO, 
+	        ALGUMAS SÃO PAGAS, MAS É A MINORIA.
+	        
+	        3.APÓS CRIAR A CONTA VÁ COLETANDO OS TOKENS API DE CADA EMPRESA E COLE
+	        NO ARQUIVO DE ACORDO COM O NOME DA EMPRESA.
+	        
+	        OBS: TIRE OS COLCHETES E DEPOIS COLE A CHAVE NAS RESPECTIVAS EMPRESAS.
+	        
+	        PARA ENTENDER MELHOR TEM UM POST NO MEDIUM SOBRE:
+	        
+	        https://muhdaffa.medium.com/maximizing-the-potential-of-the-subfinder-562fc7e7e9e4

@@ -1,0 +1,19 @@
+Este bug também é considerado um bug P4. Este bug é simples, como você pode entender pelo seu nome. Como muitos sites têm seção de comentários e eles têm um recurso específico de relatar comentários de outros usuários se você achar isso sensível.
+
+Para explorar esse recurso, digamos que não haja limite de taxa e o comentário tenha sido excluído após um número específico de denúncias sobre esse comentário. Agora você pode capturar a solicitação de denúncia do comentário para o Burpsuite e enviá-la ao intruso e iniciar o ataque. Após um número de solicitações, você verá que o comentário foi excluído.
+
+Hora do POC… 🙂
+
+Descrição:-A funcionalidade “report comment” na plataforma permite que os usuários reportem comentários que podem ser ofensivos ou inapropriados. No entanto, não há limitação de taxa na solicitação de relatório, o que permite que um invasor automatize o processo de relatório e alcance o número limite de relatórios necessários para a remoção do comentário.
+
+Passos para reproduzir:-
+
+1.Visite a página https://example.com/blog/page4/report-comment?comment_id=33
+
+2.Denunciar este comentário e capturar solicitação no Burpsuite
+
+3.Envie esta solicitação no burpsuite intruder e inicie o ataque
+
+4.Depois de alguns minutos o comentário do usuário foi excluído
+
+Impacto: A ausência de limitação de taxa no recurso “report comment” permite que invasores automatizem relatórios e removam comentários legítimos sem entrada genuína do usuário. Isso pode levar à censura não autorizada, afetar negativamente a experiência do usuário e corroer a confiança nas capacidades de moderação da plataforma.

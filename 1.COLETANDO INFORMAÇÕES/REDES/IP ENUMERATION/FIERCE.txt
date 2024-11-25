@@ -1,0 +1,7 @@
+A O FIERCE É UMA FERRAMENTA DE RECONHECIMENTO DE DNS.	
+	
+	COMANDO: fierce --domain <dominio> --wide
+	
+	O --wide TRAZ UMA AMPLITUDE MAIOR PROCURANDO POR DOMINIOS PRÓXIMOS EM TODOS OS IPS DO /24.
+	
+	CASO QUEIRA COLETAR APENAS OS IPs USE: fierce --domain <dominio> --wide | awk '{print $1}'| tr -d "':"

@@ -1,0 +1,23 @@
+O bypass de verificação de e-mail pode funcionar de muitas maneiras. Vamos ver alguns desses casos.
+
+Caso 1: URLs de ativação de conta desprotegida
+
+Alguns sites usam URLs previsíveis para verificação de e-mail, como example.com/verify?user_id=1234. Se essas URLs não incluírem um token suficientemente único ou outro identificador seguro e simplesmente confiarem em um ID de usuário, um invasor pode tentar acessar example.com/verify?user_id=1234diretamente, e com isso você pode verificar qualquer conta sem link de verificação de e-mail.
+
+Caso 2: Tokens de Verificação Previsíveis
+
+Se o site usa tokens facilmente adivinháveis ​​ou incrementais, como example.com/verify?token=abcd1234onde o padrão do token é previsível, você pode forçar a navegação por tokens possíveis para ativar as contas de outros usuários. Esse caso é raro de encontrar, pois a randomização do token é feita por quase todos os sites.
+
+Caso 3: Ignorando verificações de status de verificação
+
+Em alguns casos, você pode acessar diretamente seções do site destinadas a usuários verificados se o site não aplicar verificações de verificação em ações restritas. Por exemplo, se o site não verificar o status de verificação de um usuário em cada ação sensível, os invasores podem simplesmente pular a etapa de verificação e prosseguir para usar a conta. Também há outra maneira de fazer isso se o site estiver usando “is_varified: false”, então você pode tentar ignorar isso também apenas por “is_varified: true”
+
+Caso 4: Acesso direto à área de usuário verificado
+
+Às vezes, quando você se inscreve em um site e ele não permite que você acesse nenhum recurso ou qualquer coisa e pede verificação de e-mail, você pode tentar alguns caminhos de URL previsíveis (por exemplo, /dashboardou /profile) que você pode acessar diretamente digitando a URL no navegador. Isso pode lhe dar acesso ao site sem verificação.
+
+Caso 5: Sequestro de e-mail de verificação
+
+Às vezes, quando você altera seu endereço de e-mail em um site, ele envia um novo link de verificação para confirmar a alteração. No entanto, se você não verificar imediatamente e depois alterar seu e-mail novamente para um endereço diferente que deseja sequestrar, o link de verificação anterior ainda pode funcionar. Ao clicar no primeiro link, você pode verificar o novo endereço de e-mail sem precisar acessá-lo. Isso permite que você sequestre o e-mail de destino na conta se o sistema não tiver invalidado o antigo link de verificação.
+
+Impacto: O impacto de ignorar a verificação de e-mail inclui acesso não autorizado à conta, risco de representação falsa, possível invasão de conta e perda de confiança nas medidas de segurança da plataforma.

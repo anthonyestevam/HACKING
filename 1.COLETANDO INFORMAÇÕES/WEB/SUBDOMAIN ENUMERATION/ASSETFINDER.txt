@@ -1,0 +1,5 @@
+O ASSETFINDER É UMA FERRAMENTA QUE ENUMERA SUBDOMINIOS.
+	
+	COMANDO: assetfinder <dominio>
+	
+	EX: assetfinder site.com

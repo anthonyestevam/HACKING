@@ -1,0 +1,3 @@
+NUCLEI BUG HUNTER É UM REPOSITORIO QUE CONTÉM AlGUNS TEMPLATES PARA O NUCLEI.
+
+	SITE: https://github.com/ayadim/Nuclei-bug-hunter

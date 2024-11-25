@@ -1,0 +1,9 @@
+ADB É UMA FERRAMENTA.
+	
+	adb devices: MOSTRA OS DISPOSITIVOS CONECTADOS.
+	
+	adb connect <ip:port_dispositivo> : CONECTA NO DISPOSITIVO, CASO NÃO ESTEJA CONECTADO.
+	
+	adb shell: ENTRA NA LINHA DE COMANDO DO DISPOSITIVO. OBS: CASO VOCÊ TENHA MAIS DE UM DISPOSITIVO CONECTADO, USE adb <ip:port> shell PARA ESPECIFICAR O DISPOSITIVO QUE DESEJA USAR.
+	
+	Dentro do adb shell você pode navegar da mesma forma que navegaria em um terminal linux, ja que dispositivos androids são baseados em kernel linux.

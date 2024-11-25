@@ -1,0 +1,8 @@
+UMA FORMA DE ENUMERAR JS SERIA USANDO FERRAMENTAS DE CRAWLING COMO O WAYBACKURLS, GAU, KATANA, ETC...
+E FILTRAR COM GREP.
+	
+	EX:  echo site | waybackurls | grep -E "\.js(?:onp?)?$"
+				
+				OU
+				
+	    echo site.com | gau | grep -E "\.js(?:onp?)?$"

@@ -1,0 +1,21 @@
+O MODO MONITOR É USADO PARA VOCÊ MONITORAR AS REDES, E ALÉM DE COLOCA-LO EM MODO MONITOR PELO AIRCRACK-NG
+PODE SE COLOCAR TAMBÉM PELO IFCONFIG.	
+	
+	
+	1.DERRUBAR SUA INTERFACE DE REDE.	
+		
+		COMANDO: ifconfig nome_interface down
+		
+		EX: ifconfig wlan0 down
+		
+	2.SUBIR O MODO MONITOR.
+		
+		COMANDO: iwconfig nome_interface mode monitor
+		
+		EX: iwconfig wlan0 mode monitor
+		
+	3.QUANDO QUISER TIRAR DO MODO MONITOR É SIMPLES TAMBÉM.	
+		
+		COMANDO: ifconfig nome_interface up
+		
+		EX: ifconfig wlan0 up

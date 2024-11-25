@@ -1,0 +1,9 @@
+ROUBO DE COOKIES:
+	 	
+	 	1.VÁ NO IP DA VITIMA EM 'Online Browsers'.
+	 	
+	 	2.VÁ EM 'DETAILS'.
+	 	
+	 	3.PROCURE POR 'BROWSER.WINDOW.COOKIES'.
+	 	
+	 	4.LÁ ESTARÁ O COOKIE DE SESSÃO DA VITIMA.

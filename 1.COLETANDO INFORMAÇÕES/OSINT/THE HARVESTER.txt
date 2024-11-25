@@ -1,0 +1,8 @@
+O THE HARVESTER É UMA FERRAMENTA UTILIZADA PARA COLETA DE INFORMAÇÕES COMO EMAILS, SUBDOMINIOS, ENDEREÇOS IP 
+E URLs QUE PODEM TER VAZAMENTOS.
+	
+	COMO USAR:
+		
+		python3 theHarvester.py -d nome_dominio -b all
+		
+		EX: python3 theHarvester.py -d google.com -b all

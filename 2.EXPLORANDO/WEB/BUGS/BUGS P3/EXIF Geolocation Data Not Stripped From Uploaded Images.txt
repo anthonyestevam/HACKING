@@ -1,0 +1,13 @@
+EXIF Geolocation Data Not Stripped From Uploaded Images é um bug simples de ser encontrado.
+
+1.Crie uma conta.
+
+2.Coloque uma foto de perfil.
+
+3.Copie a URL da foto.
+
+4.Vá no site jimpl.com ou no pics.io/photo-metadata-viewer.
+
+5.Cole a URL no campo que pedir.
+
+6.Analise se tem alguma informação sensível como localização da foto.
