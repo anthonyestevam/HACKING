@@ -1,0 +1,3 @@
+Uma falha simples de ser analisada e descoberta é o debugger de um apk ativado. Você pode descobrir esse bug pela análise estática do código ou usando a ferramenta MobSF ja dará um retorno se essa falha existe nesse apk, mas sempre confirmando a falha lendo o código fonte do APK, pelo JADX-GUI por exemplo.
+
+Impacto: Manter o debugger ativado em um APK, especialmente em produção, é uma prática insegura que expõe o sistema e os usuários a ataques de engenharia reversa, exposição de dados sensíveis, modificação de comportamento e aumento do risco de falhas de segurança.

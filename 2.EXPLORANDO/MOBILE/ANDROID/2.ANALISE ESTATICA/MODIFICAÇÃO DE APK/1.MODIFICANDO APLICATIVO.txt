@@ -1,0 +1,19 @@
+A MODIFICAÇÃO DE CÓDIGOS SERVE PARA FAZER BYPASSES, ETC...
+
+ETAPAS:
+	
+	1.DECOMPILE O APK: apktool d <arquivo.apk>. OAPK SERÁ DECOMPILADO E CRIADO UM DIRETÓRIO COM O NOME DELE
+	
+	2.ANALISE O CÓDIGO, ALTERE O QUE DESEJA E SALVE.
+	
+	3.RECOMPILE O APK: apktool b <diretorio> -o <novoarquivo.apk>
+	
+	4.CRIE UMA CHAVE: keytool -genkey -keystore minhakeystore.jks -keyalg RSA -keysize 2048 -validity 360 -alias meualias
+	
+	5.ASSINE O APK: jarsigner -sigalg SHA1withRSA -digestalg SHA1 -keystore minhakeystore.jks <novoarquivo.apk> meualias
+	
+	6.ABRA UM SERVIDOR ONDE FOI ASSINADO O APK: python3 -m http.server 8080.
+	
+	7.VÁ NO NAVEGADOR E ACESSE O SEU IP LOCAL: EX: 172.0.0.1:8080. 
+	
+	8.BAIXE O ARQUIVO E ENVIE PARA SEU DISPOSITIVO.

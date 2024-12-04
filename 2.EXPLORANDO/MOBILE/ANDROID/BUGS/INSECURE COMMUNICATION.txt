@@ -1,0 +1,10 @@
+Insecure Communication ocorre quando o aplicativo conversa com o servidor usando HTTP ao invés de HTTPS.
+
+Passos:
+	1.Use o Burp Suite para capturar as requisições do aplicativo.
+	
+	2.Navegue pelo aplicativo, fazendo login por exemplo.
+	
+	3.Vá em Targets e cheque ao lado esquerdo se as requisições estão sendo feitas em http:// ao inves de https://.
+	
+	Impacto: A comunicação não está sendo criptografada então qualquer pessoa que esteja sniffando a rede pode capturar os dados de login por exemplo.

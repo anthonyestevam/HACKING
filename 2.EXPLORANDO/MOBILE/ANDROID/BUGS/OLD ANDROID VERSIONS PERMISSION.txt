@@ -1,0 +1,3 @@
+Essa falha ocorre quando o aplicativo é permitido ser instalado em versões mais antigas de android. um bug simples de ser analisado, que pode ser descoberto na análise estática do apk. Usando o MobSF por exemplo você já terá uma noção se essa falha existe.
+
+Impacto: Mais facilidade em burlar padrões de segurança do sistema, ataques via APKs não verificados, Permissões menos restritas, falta de patches de segurança, etc…

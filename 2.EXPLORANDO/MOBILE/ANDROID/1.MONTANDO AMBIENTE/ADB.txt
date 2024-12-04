@@ -6,4 +6,6 @@ ADB É UMA FERRAMENTA.
 	
 	adb shell: ENTRA NA LINHA DE COMANDO DO DISPOSITIVO. OBS: CASO VOCÊ TENHA MAIS DE UM DISPOSITIVO CONECTADO, USE adb <ip:port> shell PARA ESPECIFICAR O DISPOSITIVO QUE DESEJA USAR.
 	
+	adb push/pull: o adb push envia um arquivo da sua máquina para o dispositivo e o pull faz o contrário.
+	
 	Dentro do adb shell você pode navegar da mesma forma que navegaria em um terminal linux, ja que dispositivos androids são baseados em kernel linux.

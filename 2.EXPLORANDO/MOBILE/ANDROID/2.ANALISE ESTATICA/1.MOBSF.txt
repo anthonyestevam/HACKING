@@ -1,0 +1,7 @@
+O MobSF é uma ferramenta de análise estática que faz uma análise de forma automatizada. Ela é uma ótima ferramenta para o início da análise estática, porque você terá uma visão geral do apk, desde possíveis falhas a muito mais… Por ser uma ferramenta automatizada seus resultados podem conter falsos-positivos, por isso é indicado utilizá-la no início da analise para ter noção das possíveis falhas e informações e depois confirmar com a análise estática de forma manual. Você pode acessar o repositório dela para instalar via docker ou acessar pelo site aberto a rede mobsf.live
+
+1.Entre no MobSF
+
+2.Faça upload do APK.
+
+O MobSF fará análise do apk e mostrara diversas informações sobre o aplicativo, desde possíveis falhas como debugger ativado, permissão de instalar o apk em versões de androids mais antigos, e muito mais… Mostra Possíveis Hardcodeds encontrados no código fonte e muito mais coisas.
