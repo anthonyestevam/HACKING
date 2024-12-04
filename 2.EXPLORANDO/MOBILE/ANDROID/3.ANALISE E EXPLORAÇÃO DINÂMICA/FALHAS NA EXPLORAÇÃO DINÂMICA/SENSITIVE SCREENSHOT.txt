@@ -1,0 +1,23 @@
+SENSITIVE SCREENSHOT OCORRE QUANDO VOCÊ TEM PERMISSÕES DE TIRAR PRINT DE TELAS SENSIVEIS QUE CONTÉM DADOS PII OU DADOS DE TOKEN, ETC...
+	
+	1.ENTRE NO APLICATIVO PELO GENYMOTION.
+	
+	2.VÁ PARA UMA TELA SENSÍVEL.
+	
+	3.VÁ NA OPÇÃO CAPUTRE DO GENYMOTION.
+	
+	4.ESCOLHA A OPÇÃO DE SCREENSHOT.
+	
+	SE O SCREENSHOT FOR TIRADO NORMALMENTE MOSTRANDO OS DADOS, ENTÃO É UMA FALHA.
+	
+	
+	IMPACTO: 
+	
+	1.Roubo de dados sensíveis, como credenciais, números de cartões, ou tokens de autenticação.
+
+	2.Fraude e engenharia social, ao compartilhar ou interceptar informações indevidamente.
+
+	3.Vazamento de informações pessoais, comprometendo a privacidade e violando regulamentações como GDPR, PCI DSS ou HIPAA.
+
+	4.Exploração por malware, que pode capturar telas automaticamente e enviar dados para servidores maliciosos.
+	
