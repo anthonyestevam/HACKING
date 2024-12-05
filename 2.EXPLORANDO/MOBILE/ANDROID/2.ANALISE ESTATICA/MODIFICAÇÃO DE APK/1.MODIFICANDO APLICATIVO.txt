@@ -12,8 +12,5 @@ ETAPAS:
 	
 	5.ASSINE O APK: jarsigner -sigalg SHA1withRSA -digestalg SHA1 -keystore minhakeystore.jks <novoarquivo.apk> meualias
 	
-	6.ABRA UM SERVIDOR ONDE FOI ASSINADO O APK: python3 -m http.server 8080.
 	
-	7.VÁ NO NAVEGADOR E ACESSE O SEU IP LOCAL: EX: 172.0.0.1:8080. 
-	
-	8.BAIXE O ARQUIVO E ENVIE PARA SEU DISPOSITIVO.
+	8.INSTALE O NOVO APK NO SEU DISPOSITIVO.
